@@ -22,26 +22,26 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="幻影">
-<meta property="og:url" content="https://phantomabyss.github.io/index.html">
+<meta property="og:url" content="https://phantomabyss.github.io/tags/hexo/index.html">
 <meta property="og:site_name" content="幻影">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="phantom">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://phantomabyss.github.io/">
+<link rel="canonical" href="https://phantomabyss.github.io/tags/hexo/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>幻影</title>
+  <title>标签: hexo | 幻影</title>
   
 
 
@@ -153,209 +153,70 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content tag">
             
-      
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/27/hexo03/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="phantom">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="幻影">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/27/hexo03/" class="post-title-link" itemprop="url">解决每次部署到GitHub时都需要输入用户名和密码的问题</a>
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">hexo
+          <small>标签</small>
         </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2019-09-27 23:17:37" itemprop="dateCreated datePublished" datetime="2019-09-27T23:17:37+08:00">2019-09-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-28 13:43:00" itemprop="dateModified" datetime="2019-09-28T13:43:00+08:00">2019-09-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>459</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-          <p>前提：<br>    使用ssh连接的方式可以避免每次部署项目的时候需要输入用户名和密码的过程，同时也比较安全<br>因此就需要先配置<a href="https:/.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github的ssh密匙</a>哟，然后在进行后面的操作才有效哟<br>1.修改_config.yml文件，将部署方式从https方式修改为ssh，直接打开_config.yml搜索deployment即可<br>修改之前：<br>        <img src="https://phantomAbyss.github.io/images/hexo/hexo03/02.PNG" alt><br>修改之后：<br>        <img src="https://phantomAbyss.github.io/images/hexo/hexo03/03.PNG" alt><br>2.接下来直接在hexo的根目录下打开git bash命令行执行以下两条命令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>    <span class="comment"># GitHub的用户名</span></span><br><span class="line">$ git config --global user.email <span class="string">"yourEmail"</span>  <span class="comment"># GitHub注册时你输入的邮箱</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://phantomAbyss.github.io/images/hexo/hexo03/01.png" alt><br>3.然后重新打开git bash命令行再次部署到GitHub即可</p>
-<p>到这里我的就行了，建议你们可以去试试。如果问题还没有解决，可以参考原博文的方法。</p>
-<p>以上内容参考于：<br>    <a href="https://zhidao.baidu.com/question/2121621163479338627.html" target="_blank" rel="noopener">为什么hexo用git部署到github上每次都要输入用户名和密码</a><br>    <a href="https://www.cnblogs.com/yaoel/p/5381826.html" target="_blank" rel="noopener">使用Github SSH Key来避免Hexo部署时输入账户密码</a><br>    <a href="https://blog.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github设置SSH登陆</a></p>
-
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/09/27/hexo03/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+    <div class="collection-year">
+      <span class="collection-header">2019</span>
     </div>
 
-    
-    
-    
-	<div>
-		
-		</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-09-27T23:17:37+08:00"
+              content="2019-09-27">
+          09-27
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/09/27/hexo03/" itemprop="url">
+            <span itemprop="name">解决每次部署到GitHub时都需要输入用户名和密码的问题</span>
+          </a>
+      </div>
+
+    </header>
   </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo02/">
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/author.jpg">
-      <meta itemprop="name" content="phantom">
-      <meta itemprop="description" content="">
-    </span>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2019-09-20T10:42:16+08:00"
+              content="2019-09-20">
+          09-20
+        </time>
+      </div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="幻影">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/20/hexo02/" class="post-title-link" itemprop="url">如何将博客上传到GitHub.io上</a>
-        </h2>
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/09/20/hexo02/" itemprop="url">
+            <span itemprop="name">如何将博客上传到GitHub.io上</span>
+          </a>
+      </div>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+    </header>
+  </article>
 
-              <time title="创建时间：2019-09-20 10:42:16" itemprop="dateCreated datePublished" datetime="2019-09-20T10:42:16+08:00">2019-09-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-13 09:08:29" itemprop="dateModified" datetime="2020-05-13T09:08:29+08:00">2020-05-13</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>452</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>jfksfjsl;fjsdl</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2019/09/20/hexo02/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
     </div>
-
-    
-    
-    
-	<div>
-		
-		</div>
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
+  </div>
   
   
   
-
 
   
 
