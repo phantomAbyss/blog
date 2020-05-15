@@ -18,31 +18,6 @@
   
   <entry>
     <title>解决每次部署到GitHub时都需要输入用户名和密码的问题</title>
-    <link href="https://phantomabyss.github.io/2019/09/27/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>https://phantomabyss.github.io/2019/09/27/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</id>
-    <published>2019-09-27T15:17:37.000Z</published>
-    <updated>2020-05-15T09:45:32.959Z</updated>
-    
-    <content type="html"><![CDATA[<p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。</p><a id="more"></a><p><strong>前提：<br>    &emsp;使用ssh连接的方式可以避免每次部署项目的时候需要输入用户名和密码的过程，同时也比较安全。</strong></p><ul><li><strong>1、配置ssh密钥</strong><br><del>如果已经在GitHub配置ssh密钥，可以跳过</del><ul><li>1.1、生成ssh密钥对<ul><li>1.1.1、查看自己是否已经生成了ssh密钥对,如果没有，文件夹为空。<img src="../../images/hexo/ssh.jpg"></li><li>1.1.2、在git bash命令行执行以下命令,建议在生成密钥的过程中不要输入用户名和密码，否则后面就需要其他的配置，一路回车就行了，执行完成后就会生成对应的密钥文件。<img src="../../images/hexo/getssh.jpg"><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C 你的GitHub对应的邮箱</span><br></pre></td></tr></table></figure><img src="../../images/hexo/isapub.jpg">.pub后缀的文件就是你的公钥</li></ul></li><li>1.2、在GitHub上添加公钥<br>  将上面.pub文件的内容复制到github的ssh keys(头像处的settings-&gt;SSH and GPG keys-&gt;New SSH key)处，title可以随便取。  <img src="../../images/hexo/sshkeys.jpg"></li></ul></li><li><strong>2、修改站点目录配置文件</strong><ul><li>2.1、修改_config.yml文件，将部署方式从https方式修改为ssh，直接打开_config.yml搜索deployment即可<img src="../../images/hexo/deployment.jpg"></li><li>2.2、接下来直接在hexo的根目录下打开git bash命令行执行以下两条命令即可<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>    <span class="comment"># GitHub的用户名</span></span><br><span class="line">$ git config --global user.email <span class="string">"yourEmail"</span>  <span class="comment"># GitHub注册时你输入的邮箱</span></span><br></pre></td></tr></table></figure></li></ul></li><li><strong>3、重新部署hexo到GitHub</strong><br>  重新打开git bash命令行再次部署到GitHub即可</li></ul><p>到这里我的就行了，建议你们可以去试试。如果问题还没有解决，可以参考原博文的方法。</p><p>以上内容参考于：<br>    <a href="https://zhidao.baidu.com/question/2121621163479338627.html" target="_blank" rel="noopener">为什么hexo用git部署到github上每次都要输入用户名和密码</a><br>    <a href="https://www.cnblogs.com/yaoel/p/5381826.html" target="_blank" rel="noopener">使用Github SSH Key来避免Hexo部署时输入账户密码</a><br>    <a href="https://blog.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github设置SSH登陆</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://phantomabyss.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://phantomabyss.github.io/tags/hexo/"/>
-    
-      <category term="GitHub" scheme="https://phantomabyss.github.io/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决每次部署到GitHub时都需要输入用户名和密码的问题</title>
     <link href="https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/</id>
     <published>2019-09-27T15:17:37.000Z</published>
@@ -53,31 +28,6 @@
     <summary type="html">
     
       &lt;p&gt;对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://phantomabyss.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://phantomabyss.github.io/tags/hexo/"/>
-    
-      <category term="GitHub" scheme="https://phantomabyss.github.io/tags/GitHub/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客部署到GitHub</title>
-    <link href="https://phantomabyss.github.io/2019/09/20/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/"/>
-    <id>https://phantomabyss.github.io/2019/09/20/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/</id>
-    <published>2019-09-20T02:42:16.000Z</published>
-    <updated>2020-05-15T09:11:26.959Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文简单介绍了一下hexo博客部署到GitHub上的步骤</p><a id="more"></a><ul><li><strong>1、新建GitHub仓库</strong><ul><li>1.1、登录到自己的<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>中，新建一个名为$你的用户名.github.io(如phantomAbyss.github.io)$的仓库，<img src="../../images/hexo/createRepository.jpg"></li><li>1.2、然后创建成功后，在Settings往下翻找到GitHub Pages打勾，不然后面访问不了<br><img src="../../images/hexo/settings.jpg"><img src="../../images/hexo/githubPages.jpg"></li><li>1.3、复制刚建的仓库的git地址<img src="../../images/hexo/address.jpg"></li></ul></li><li><strong>2、修改本地hexo的配置文件</strong><ul><li>2.1、首先进入自己的blog目录(即站点目录，我的命名是hexo)，打开该目录下的.config.yml文件<img src="../../images/hexo/hexo.jpg"></li><li>2.2、直接在_config.yml文件搜索deploy,可以找到如下图所示的内容  <img src="../../images/hexo/deploy.jpg">  然后按照下面的描述修改即可。  ***注意：      1.每个冒号后面都有一个空格      2.repo的命令必须严格按照要求命名***  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment"># 下面两种形式的地址任选一种</span></span><br><span class="line">repo: https://github.com/GitHub用户名/GitHub用户名.github.io.git</span><br><span class="line"><span class="comment"># repo: git@github.com:GitHub用户名/GitHub用户名.github.io.git</span></span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li></ul></li><li><strong>3、安装部署博客的插件</strong><ul><li>3.1、在站点目录打开git bash命令行执行命令(我是hexo目录)  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>  <img src="../../images/hexo/hexo-deployer.jpg"></li><li>3.2、配置ssh,如果之前已配置，可以直接跳过</li><li>3.3、使用命令$hexo d(hexo deploy)$即可成功部署博客</li></ul></li><li><strong>4、浏览效果</strong><ul><li>4.1、最后直接在浏览器输入(https://你的GitHub的用户名.github.io)即可访问你的博客主页了</li><li>4.2、<a href="https://phantomabyss.github.io/">幻影</a>，这是我的博客，欢迎大家来踩踩。<br/>到这里就差不多结束了。。。。。</li></ul></li></ul><hr><p>最后再说说对于<strong>每次执行hexo d命令时都需要输入账号和密码</strong>的问题，可以参考另一篇博客<a href="">解决每次部署到GitHub时都需要输入用户名和密码的问题</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文简单介绍了一下hexo博客部署到GitHub上的步骤&lt;/p&gt;
     
     </summary>
     
