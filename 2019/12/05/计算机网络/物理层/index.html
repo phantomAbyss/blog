@@ -20,29 +20,20 @@
     var CONFIG = {"hostname":"phantomabyss.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+  <meta name="description" content="基本概念 1、如何在连接各种计算机的传输媒体上传输数据比特流。2、尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到差异，从而使数据链路层只考虑完成本层的协议和服务。  主要任务 描述为确定与传输媒体的接口有关的一些特性。   1、机械特性：指明接口所用接线器的形状和尺寸、引脚数目、和排列、固定和锁定装置等。 2、电气特性：指明在接口电缆的各条线上出现的电压范围。 3、功能特">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客部署到GitHub">
-<meta property="og:url" content="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="物理层">
+<meta property="og:url" content="https://phantomabyss.github.io/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/index.html">
 <meta property="og:site_name" content="幻影">
-<meta property="og:description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+<meta property="og:description" content="基本概念 1、如何在连接各种计算机的传输媒体上传输数据比特流。2、尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到差异，从而使数据链路层只考虑完成本层的协议和服务。  主要任务 描述为确定与传输媒体的接口有关的一些特性。   1、机械特性：指明接口所用接线器的形状和尺寸、引脚数目、和排列、固定和锁定装置等。 2、电气特性：指明在接口电缆的各条线上出现的电压范围。 3、功能特">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/settings.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/githubPages.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/address.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/deploy.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo-deployer.jpg">
-<meta property="article:published_time" content="2019-09-20T02:42:16.000Z">
-<meta property="article:modified_time" content="2020-05-15T10:03:25.832Z">
+<meta property="article:published_time" content="2019-12-05T00:27:44.000Z">
+<meta property="article:modified_time" content="2019-12-05T02:04:30.861Z">
 <meta property="article:author" content="phantom">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="计算机网络">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
 
-<link rel="canonical" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="https://phantomabyss.github.io/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/">
 
 
 <script id="page-configurations">
@@ -55,7 +46,7 @@
   };
 </script>
 
-  <title>hexo博客部署到GitHub | 幻影</title>
+  <title>物理层 | 幻影</title>
   
 
 
@@ -174,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -187,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo博客部署到GitHub
+          物理层
         </h1>
 
         <div class="post-meta">
@@ -196,23 +187,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-09-20 10:42:16" itemprop="dateCreated datePublished" datetime="2019-09-20T10:42:16+08:00">2019-09-20</time>
+              <time title="创建时间：2019-12-05 08:27:44 / 修改时间：10:04:30" itemprop="dateCreated datePublished" datetime="2019-12-05T08:27:44+08:00">2019-12-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-15 18:03:25" itemprop="dateModified" datetime="2020-05-15T18:03:25+08:00">2020-05-15</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" itemprop="url" rel="index"><span itemprop="name">计算机网络</span></a>
                 </span>
             </span>
 
@@ -229,7 +214,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>802</span>
+              <span>1.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -248,42 +233,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文简单介绍了一下hexo博客部署到GitHub上的步骤</p>
-<a id="more"></a>
+        <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><blockquote>
+<p>1、如何在连接各种计算机的传输媒体上传输数据比特流。<br>2、尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到差异，从而使数据链路层只考虑完成本层的协议和服务。</p>
+</blockquote>
+<h5 id="主要任务"><a href="#主要任务" class="headerlink" title="主要任务"></a>主要任务</h5><blockquote>
+<p>描述为确定与传输媒体的接口有关的一些特性。</p>
+</blockquote>
 <ul>
-<li><strong>1、新建GitHub仓库</strong><ul>
-<li>1.1、登录到自己的<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>中，新建一个名为$你的用户名.github.io(如phantomAbyss.github.io)$的仓库，<img src="/images/hexo/createRepository.jpg"></li>
-<li>1.2、然后创建成功后，在Settings往下翻找到GitHub Pages打勾，不然后面访问不了<br><img src="/images/hexo/settings.jpg"><img src="/images/hexo/githubPages.jpg"></li>
-<li>1.3、复制刚建的仓库的git地址<img src="/images/hexo/address.jpg"></li>
+<li>1、<strong>机械特性</strong>：指明接口所用接线器的形状和尺寸、引脚数目、和排列、固定和锁定装置等。</li>
+<li>2、<strong>电气特性</strong>：指明在接口电缆的各条线上出现的电压范围。</li>
+<li>3、<strong>功能特性</strong>：指明某条线出现的某一电平的电压的意义。</li>
+<li>4、<strong>过程特性</strong>：指明对于不同功能的各种可能事件的出现顺序。</li>
 </ul>
-</li>
-<li><strong>2、修改本地hexo的配置文件</strong><ul>
-<li>2.1、首先进入自己的blog目录(即站点目录，我的命名是hexo)，打开该目录下的.config.yml文件<img src="/images/hexo/hexo.jpg"></li>
-<li>2.2、直接在_config.yml文件搜索deploy,可以找到如下图所示的内容  <img src="/images/hexo/deploy.jpg">
-  然后按照下面的描述修改即可。
-  ***注意：
-      1.每个冒号后面都有一个空格
-      2.repo的命令必须严格按照要求命名***
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment"># 下面两种形式的地址任选一种</span></span><br><span class="line">repo: https://github.com/GitHub用户名/GitHub用户名.github.io.git</span><br><span class="line"><span class="comment"># repo: git@github.com:GitHub用户名/GitHub用户名.github.io.git</span></span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
+<p><strong>ps</strong>：</p>
+<ul>
+<li>1、数据在计算机内部多采用并行传输的方式。</li>
+<li>2、数据在通信线路上传输方式一般都是串行传输——逐个按照比特按照时间顺序传输</li>
+<li>3、物理层需要完成传输方式的转换</li>
 </ul>
-</li>
-<li><strong>3、安装部署博客的插件</strong><ul>
-<li>3.1、在站点目录打开git bash命令行执行命令(我是hexo目录)  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-  <img src="/images/hexo/hexo-deployer.jpg"></li>
-<li>3.2、配置ssh,如果之前已配置，可以直接跳过</li>
-<li>3.3、使用命令$hexo d(hexo deploy)$即可成功部署博客</li>
+<h3 id="数据通信"><a href="#数据通信" class="headerlink" title="数据通信"></a>数据通信</h3><h4 id="数据通信系统"><a href="#数据通信系统" class="headerlink" title="数据通信系统"></a>数据通信系统</h4><blockquote>
+<p>主要由源系统(发送端，发送方)、传输系统(传输网络)和目的系统(接收端，接收方)组成</p>
+</blockquote>
+<p><strong>源系统</strong><br>&emsp;1、源点(源站，信源)：源点设备产生要传输的数据。<br>&emsp;2、发送器：通常源点生成的数字比特流需要通过发送器编码后才能在计算机系统中进行传输。 —— 调制器</p>
+<p><strong>目的系统</strong><br>&emsp;1、接收器：接收传输系统传送过来的信号，并把它转换为能够被目的设备处理的信号。—— 解调器</p>
+<h5 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h5><p>&emsp;1、模拟信号(连续信号)：代表消息的参数的取值是连续的。<br>&emsp;2、数字信号(离散信号)：代表消息的参数的取值是离散的</p>
+<h4 id="信道"><a href="#信道" class="headerlink" title="信道"></a>信道</h4><blockquote>
+<p>1、用来表示向某个方向传送消息的实体。<br>2、通信电路往往包含一条发送信道和接收信道。</p>
+</blockquote>
+<p>根据<strong>通信双方交互的方式</strong>来看，主要分为以下三种方式：</p>
+<ul>
+<li>1、<strong>单向通信(单工通信)</strong>：只能有一个方向的通信而没有反方向的交互。 —— 无线电广播一类的广播。 —— 一条信道</li>
+<li>2、<strong>双向交替通信(半双工通信)</strong>：双方都可以发送信息，但是不能同时发送消息(同理不能同时接收消息)。—— 两条信道</li>
+<li>3、<strong>双向同时通信(全双工通信)</strong>：通信的双方可以同时发送和接收信息。—— 两条信道</li>
 </ul>
-</li>
-<li><strong>4、浏览效果</strong><ul>
-<li>4.1、最后直接在浏览器输入(https://你的GitHub的用户名.github.io)即可访问你的博客主页了</li>
-<li>4.2、<a href="https://phantomabyss.github.io/">幻影</a>，这是我的博客，欢迎大家来踩踩。<br/>
-到这里就差不多结束了。。。。。
-</li>
+<h5 id="基带信号"><a href="#基带信号" class="headerlink" title="基带信号"></a>基带信号</h5><p><strong>问题</strong>：包含较多低频成分、直流成分，但是信道不能传输低频成分以及直流成分，因此需要对其进行调制<br>主要包含以下两种调制：</p>
+<ul>
+<li>1、<strong>基带调制</strong>：仅仅对基带信号的波形进行变换，使其与信道特性相符。—— 编码</li>
+<li>2、<strong>带通调制</strong>：使用载波进行调制，把基带信号的频率范围搬移到较高的频段，并转换为模拟信号，从而使其可以在模拟信道中传输。</li>
 </ul>
-</li>
+<h5 id="信道的极限容量"><a href="#信道的极限容量" class="headerlink" title="信道的极限容量"></a>信道的极限容量</h5><ul>
+<li>1、数字通信的优点：虽然信号在信道上传输会不可避免地产生失真，但在接收端只要我们可以从失真的波形中能够识别出原来的信号，那么这种失真对通信质量就没有影响。</li>
 </ul>
-<hr>
-<p>最后再说说对于<strong>每次执行hexo d命令时都需要输入账号和密码</strong>的问题，可以参考另一篇博客<a href="https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">解决每次部署到GitHub时都需要输入用户名和密码的问题</a></p>
+<p>&emsp;<strong>通信质量的影响因素</strong><br>&emsp;&emsp;1、码元传输的速率<br>&emsp;&emsp;2、信号传输的距离<br>&emsp;&emsp;3、噪声干扰<br>&emsp;&emsp;4、传输媒体的质量<br>&emsp;<strong>ps</strong>：在任何信道中，码元传输的速率都是由上限的，传输速率超过此上限，就会出现严重的码间干扰的问题，使接收端对码元的判决称为不可能。<br>&emsp;<strong>信噪比</strong></p>
+<blockquote>
+<p>信号的平均功率和噪声的平均功率之比，记为S/N.</p>
+</blockquote>
+<p><strong>信噪比(dB) = $10*log_{10}(S/N)$</strong><br>&emsp;<strong>香农公式</strong><br><strong>极限信息传输速率C是：$C = W * log_2(1 + S/N)(bit/s)$</strong></p>
+<ul>
+<li>1、W为信道的带宽(Hz)</li>
+<li>2、S为信道内所传信号的平均功率；</li>
+<li>3、N为信道内部的高斯噪声功率。</li>
+</ul>
+<p>&emsp;香农公式表明了信道的带宽或信道中的信噪比越大，信息的极限传输速率就越高。<br>&emsp;香农公式的意义是只要信息传输速率低于信道的极限信息传输效率，就一定存在某种办法来实现无差错的传输。</p>
 
     </div>
 
@@ -309,7 +310,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/" title="hexo博客部署到GitHub">https://phantomabyss.github.io/2019/09/20/hexo/hexo部署到博客/</a>
+    <a href="https://phantomabyss.github.io/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/" title="物理层">https://phantomabyss.github.io/2019/12/05/计算机网络/物理层/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,8 +322,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fa fa-tag"></i> 计算机网络</a>
           </div>
 
         
@@ -331,13 +331,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/09/20/hexo/hexo%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/" rel="prev" title="hexo如何删除文章">
-      <i class="fa fa-chevron-left"></i> hexo如何删除文章
+    <a href="/2019/12/01/secureCRT/SecureCRT%E8%BF%9E%E6%8E%A5Linux%E6%97%B6%E6%8B%92%E7%BB%9D%E8%AE%BF%E9%97%AE/" rel="prev" title="SecureCRT连接Linux时拒绝访问">
+      <i class="fa fa-chevron-left"></i> SecureCRT连接Linux时拒绝访问
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="解决每次部署到GitHub时都需要输入用户名和密码的问题">
-      解决每次部署到GitHub时都需要输入用户名和密码的问题 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -396,6 +393,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#主要任务"><span class="nav-text">主要任务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据通信"><span class="nav-text">数据通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据通信系统"><span class="nav-text">数据通信系统</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#信号"><span class="nav-text">信号</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#信道"><span class="nav-text">信道</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基带信号"><span class="nav-text">基带信号</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#信道的极限容量"><span class="nav-text">信道的极限容量</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

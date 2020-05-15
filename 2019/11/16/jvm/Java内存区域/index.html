@@ -20,29 +20,20 @@
     var CONFIG = {"hostname":"phantomabyss.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+  <meta name="description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。 Jav">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客部署到GitHub">
-<meta property="og:url" content="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="Java内存区域">
+<meta property="og:url" content="https://phantomabyss.github.io/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/index.html">
 <meta property="og:site_name" content="幻影">
-<meta property="og:description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+<meta property="og:description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。 Jav">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/settings.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/githubPages.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/address.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/deploy.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo-deployer.jpg">
-<meta property="article:published_time" content="2019-09-20T02:42:16.000Z">
-<meta property="article:modified_time" content="2020-05-15T10:03:25.832Z">
+<meta property="article:published_time" content="2019-11-16T14:29:23.000Z">
+<meta property="article:modified_time" content="2019-11-22T12:01:10.093Z">
 <meta property="article:author" content="phantom">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
 
-<link rel="canonical" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="https://phantomabyss.github.io/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/">
 
 
 <script id="page-configurations">
@@ -55,7 +46,7 @@
   };
 </script>
 
-  <title>hexo博客部署到GitHub | 幻影</title>
+  <title>Java内存区域 | 幻影</title>
   
 
 
@@ -174,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -187,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo博客部署到GitHub
+          Java内存区域
         </h1>
 
         <div class="post-meta">
@@ -197,14 +188,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2019-09-20 10:42:16" itemprop="dateCreated datePublished" datetime="2019-09-20T10:42:16+08:00">2019-09-20</time>
+              <time title="创建时间：2019-11-16 22:29:23" itemprop="dateCreated datePublished" datetime="2019-11-16T22:29:23+08:00">2019-11-16</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-15 18:03:25" itemprop="dateModified" datetime="2020-05-15T18:03:25+08:00">2020-05-15</time>
+                <time title="修改时间：2019-11-22 20:01:10" itemprop="dateModified" datetime="2019-11-22T20:01:10+08:00">2019-11-22</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -212,7 +203,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">深入理解Java虚拟机</span></a>
                 </span>
             </span>
 
@@ -229,7 +220,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>802</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -248,42 +239,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文简单介绍了一下hexo博客部署到GitHub上的步骤</p>
-<a id="more"></a>
-<ul>
-<li><strong>1、新建GitHub仓库</strong><ul>
-<li>1.1、登录到自己的<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>中，新建一个名为$你的用户名.github.io(如phantomAbyss.github.io)$的仓库，<img src="/images/hexo/createRepository.jpg"></li>
-<li>1.2、然后创建成功后，在Settings往下翻找到GitHub Pages打勾，不然后面访问不了<br><img src="/images/hexo/settings.jpg"><img src="/images/hexo/githubPages.jpg"></li>
-<li>1.3、复制刚建的仓库的git地址<img src="/images/hexo/address.jpg"></li>
-</ul>
-</li>
-<li><strong>2、修改本地hexo的配置文件</strong><ul>
-<li>2.1、首先进入自己的blog目录(即站点目录，我的命名是hexo)，打开该目录下的.config.yml文件<img src="/images/hexo/hexo.jpg"></li>
-<li>2.2、直接在_config.yml文件搜索deploy,可以找到如下图所示的内容  <img src="/images/hexo/deploy.jpg">
-  然后按照下面的描述修改即可。
-  ***注意：
-      1.每个冒号后面都有一个空格
-      2.repo的命令必须严格按照要求命名***
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment"># 下面两种形式的地址任选一种</span></span><br><span class="line">repo: https://github.com/GitHub用户名/GitHub用户名.github.io.git</span><br><span class="line"><span class="comment"># repo: git@github.com:GitHub用户名/GitHub用户名.github.io.git</span></span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><strong>3、安装部署博客的插件</strong><ul>
-<li>3.1、在站点目录打开git bash命令行执行命令(我是hexo目录)  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-  <img src="/images/hexo/hexo-deployer.jpg"></li>
-<li>3.2、配置ssh,如果之前已配置，可以直接跳过</li>
-<li>3.3、使用命令$hexo d(hexo deploy)$即可成功部署博客</li>
-</ul>
-</li>
-<li><strong>4、浏览效果</strong><ul>
-<li>4.1、最后直接在浏览器输入(https://你的GitHub的用户名.github.io)即可访问你的博客主页了</li>
-<li>4.2、<a href="https://phantomabyss.github.io/">幻影</a>，这是我的博客，欢迎大家来踩踩。<br/>
-到这里就差不多结束了。。。。。
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>最后再说说对于<strong>每次执行hexo d命令时都需要输入账号和密码</strong>的问题，可以参考另一篇博客<a href="https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">解决每次部署到GitHub时都需要输入用户名和密码的问题</a></p>
+        <h4 id="Java虚拟机内存的各个区域"><a href="#Java虚拟机内存的各个区域" class="headerlink" title="Java虚拟机内存的各个区域"></a>Java虚拟机内存的各个区域</h4><h5 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a><strong><em>程序计数器</em></strong></h5><blockquote>
+<p>当前线程的所执行的字节码的行号指示器——线程私有的内存</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。</span><br><span class="line">* <span class="number">2</span>、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。</span><br><span class="line">* <span class="number">3</span>、线程执行Native方法时：计数器的值为空（Undefined）。</span><br></pre></td></tr></table></figure>
+<h5 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a><strong><em>Java虚拟机栈</em></strong></h5><blockquote>
+<p>描述的是Java方法执行的内存模型——线程私有的内存。<br>生命周期与线程相同</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、每个方法在执行的同时都会创建一个栈帧用于存储局部变量表(栈内存)、操作数栈、动态链接、方法出口等信息。</span><br><span class="line">* <span class="number">2</span>、局部变量表存储八种基本数据类型(*<span class="built_in">bool</span>ean,byte,char,short,<span class="built_in">int</span>,<span class="built_in">float</span>,<span class="built_in">double</span>,long*)、对象引用类型(*<span class="built_in">ref</span>erence*类型)、*returnAddress*类型。</span><br><span class="line">   * <span class="built_in">ref</span>erence类型：可能是一个指向对象起始地址的引用指针，也可能是一个指向一个代表对象的句柄或其他与此对象相关的位置。</span><br><span class="line">* <span class="number">3</span>、$调用\stackrel&#123;方法&#125;&#123;\longrightarrow&#125;完成\stackrel&#123;等价于&#125;&#123;\Longrightarrow&#125;入栈\stackrel&#123;栈帧&#125;&#123;\longrightarrow&#125;出栈(虚拟机栈)$</span><br><span class="line">* <span class="number">4</span>、局部变量表所需的内存空间在编译期间完成分配，运行期间不会改变。</span><br><span class="line">* <span class="number">5</span>、Java虚拟机对该区域定义的两种异常规范：</span><br><span class="line">  * <span class="number">1</span>、线程请求的栈深度大于虚拟机所允许的深度。——*StackOverflowError*</span><br><span class="line">  * <span class="number">2</span>、若虚拟机支持扩展后任然无法申请到足够的内存。——*OutofMemeoryError*</span><br></pre></td></tr></table></figure>
+<h5 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a><strong><em>本地方法栈</em></strong></h5><blockquote>
+<p>为虚拟机使用的Native方法服务，具体的虚拟机可以对其自由实现。</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、HotSpot将本地方法栈与虚拟机栈合二为一了。</span><br><span class="line">* <span class="number">2</span>、本地方法栈的两种异常规范与虚拟机栈相同。</span><br></pre></td></tr></table></figure>
+<h5 id="Java堆"><a href="#Java堆" class="headerlink" title="Java堆"></a><strong><em>Java堆</em></strong></h5><blockquote>
+<p>是被所有线程共享的一块内存区域，在虚拟机启动时创建，存放对象实例，分配内存</p>
+</blockquote>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* 1、所有的对象实例以及数组都要在堆上分配内存。</span><br><span class="line">* 2、随着JIT编译器和逃逸分析技术的发展：<span class="formula">$$ <span class="tag">\<span class="name">left</span></span><span class="tag">\<span class="name">&#123;</span></span></span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">begin</span><span class="string">&#123;aligned&#125;</span></span></span></span><br><span class="line"><span class="formula">栈上分配 <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">标量替换优先技术</span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">end</span><span class="string">&#123;aligned&#125;</span></span></span></span><br><span class="line"><span class="formula"><span class="tag">\<span class="name">right</span></span>.</span></span><br><span class="line"><span class="formula">$$</span>会发生一些变化。</span><br><span class="line">* 3、是垃圾收集器管理的主要区域——都采用分代收集算法(新生代，老年代)。</span><br></pre></td></tr></table></figure>
+<h5 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a><strong><em>方法区</em></strong></h5><blockquote>
+<p>用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译、编译后的代码等数据。是各个线程共享的区域。——永久代</p>
+</blockquote>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、不需要选择一块连续的内存或可以选择固定大小或可扩展。</span><br><span class="line">* <span class="number">2.</span>还可以选择不实现垃圾收集</span><br><span class="line">* <span class="number">3</span>、该区域的内存回收主要是针对常量池的回收和对类型的卸载。</span><br></pre></td></tr></table></figure>
+<h5 id="运行时常量池"><a href="#运行时常量池" class="headerlink" title="运行时常量池"></a><strong><em>运行时常量池</em></strong></h5><blockquote>
+<p>Class文件中的一项信息时常量池，用于存放编译期生成的各种字面量和符号引用，这些内容在类加载中</p>
+</blockquote>
 
     </div>
 
@@ -309,7 +287,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/" title="hexo博客部署到GitHub">https://phantomabyss.github.io/2019/09/20/hexo/hexo部署到博客/</a>
+    <a href="https://phantomabyss.github.io/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/" title="Java内存区域">https://phantomabyss.github.io/2019/11/16/jvm/Java内存区域/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,8 +299,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+              <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           </div>
 
         
@@ -331,12 +308,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/09/20/hexo/hexo%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/" rel="prev" title="hexo如何删除文章">
-      <i class="fa fa-chevron-left"></i> hexo如何删除文章
+    <a href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" rel="prev" title="解决每次部署到GitHub时都需要输入用户名和密码的问题">
+      <i class="fa fa-chevron-left"></i> 解决每次部署到GitHub时都需要输入用户名和密码的问题
     </a></div>
       <div class="post-nav-item">
-    <a href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="解决每次部署到GitHub时都需要输入用户名和密码的问题">
-      解决每次部署到GitHub时都需要输入用户名和密码的问题 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/11/21/jvm/%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%86%85%E5%AD%98/" rel="next" title="自动内存管理机制">
+      自动内存管理机制 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -396,6 +373,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java虚拟机内存的各个区域"><span class="nav-text">Java虚拟机内存的各个区域</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#程序计数器"><span class="nav-text">程序计数器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Java虚拟机栈"><span class="nav-text">Java虚拟机栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#本地方法栈"><span class="nav-text">本地方法栈</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Java堆"><span class="nav-text">Java堆</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法区"><span class="nav-text">方法区</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行时常量池"><span class="nav-text">运行时常量池</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

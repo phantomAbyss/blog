@@ -20,29 +20,20 @@
     var CONFIG = {"hostname":"phantomabyss.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+  <meta name="description" content="收集器CMS收集器 是一种以获取最短回收停顿时间为目标的收集器。   1、CMS收集器是基于标记-清楚算法实现的。 2、运作过程： 1、初始标记：标记GC roots能直接关联的对象，速度快。 2、并发标记：进行GCTracing的过程 3、重新标记：为了修正并发标记期间因用户程序继续运作而导致标记变动的那一部分对象的标记记录，停顿时间较初始标记稍长，较并发标记时间短。 4、并发清除   3、并发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客部署到GitHub">
-<meta property="og:url" content="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="垃圾收集器">
+<meta property="og:url" content="https://phantomabyss.github.io/2019/11/26/jvm/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/index.html">
 <meta property="og:site_name" content="幻影">
-<meta property="og:description" content="本文简单介绍了一下hexo博客部署到GitHub上的步骤">
+<meta property="og:description" content="收集器CMS收集器 是一种以获取最短回收停顿时间为目标的收集器。   1、CMS收集器是基于标记-清楚算法实现的。 2、运作过程： 1、初始标记：标记GC roots能直接关联的对象，速度快。 2、并发标记：进行GCTracing的过程 3、重新标记：为了修正并发标记期间因用户程序继续运作而导致标记变动的那一部分对象的标记记录，停顿时间较初始标记稍长，较并发标记时间短。 4、并发清除   3、并发">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/settings.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/githubPages.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/address.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/deploy.jpg">
-<meta property="og:image" content="https://phantomabyss.github.io/images/hexo/hexo-deployer.jpg">
-<meta property="article:published_time" content="2019-09-20T02:42:16.000Z">
-<meta property="article:modified_time" content="2020-05-15T10:03:25.832Z">
+<meta property="article:published_time" content="2019-11-26T06:25:19.000Z">
+<meta property="article:modified_time" content="2019-11-26T12:48:30.927Z">
 <meta property="article:author" content="phantom">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://phantomabyss.github.io/images/hexo/createRepository.jpg">
 
-<link rel="canonical" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="https://phantomabyss.github.io/2019/11/26/jvm/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/">
 
 
 <script id="page-configurations">
@@ -55,7 +46,7 @@
   };
 </script>
 
-  <title>hexo博客部署到GitHub | 幻影</title>
+  <title>垃圾收集器 | 幻影</title>
   
 
 
@@ -174,7 +165,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/11/26/jvm/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -187,7 +178,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          hexo博客部署到GitHub
+          垃圾收集器
         </h1>
 
         <div class="post-meta">
@@ -196,23 +187,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-09-20 10:42:16" itemprop="dateCreated datePublished" datetime="2019-09-20T10:42:16+08:00">2019-09-20</time>
+              <time title="创建时间：2019-11-26 14:25:19 / 修改时间：20:48:30" itemprop="dateCreated datePublished" datetime="2019-11-26T14:25:19+08:00">2019-11-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-15 18:03:25" itemprop="dateModified" datetime="2020-05-15T18:03:25+08:00">2020-05-15</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
+                  <a href="/categories/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/" itemprop="url" rel="index"><span itemprop="name">深入理解Java虚拟机</span></a>
                 </span>
             </span>
 
@@ -229,14 +214,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>802</span>
+              <span>1.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -248,43 +233,37 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>本文简单介绍了一下hexo博客部署到GitHub上的步骤</p>
-<a id="more"></a>
+        <h3 id="收集器"><a href="#收集器" class="headerlink" title="收集器"></a>收集器</h3><h4 id="CMS收集器"><a href="#CMS收集器" class="headerlink" title="CMS收集器"></a>CMS收集器</h4><blockquote>
+<p>是一种以获取最短回收停顿时间为目标的收集器。</p>
+</blockquote>
 <ul>
-<li><strong>1、新建GitHub仓库</strong><ul>
-<li>1.1、登录到自己的<a href="https://github.com" target="_blank" rel="noopener">GitHub</a>中，新建一个名为$你的用户名.github.io(如phantomAbyss.github.io)$的仓库，<img src="/images/hexo/createRepository.jpg"></li>
-<li>1.2、然后创建成功后，在Settings往下翻找到GitHub Pages打勾，不然后面访问不了<br><img src="/images/hexo/settings.jpg"><img src="/images/hexo/githubPages.jpg"></li>
-<li>1.3、复制刚建的仓库的git地址<img src="/images/hexo/address.jpg"></li>
+<li>1、CMS收集器是基于标记-清楚算法实现的。</li>
+<li>2、运作过程：<ul>
+<li>1、初始标记：标记GC roots能直接关联的对象，速度快。</li>
+<li>2、并发标记：进行GCTracing的过程</li>
+<li>3、重新标记：为了修正并发标记期间因用户程序继续运作而导致标记变动的那一部分对象的标记记录，停顿时间较初始标记稍长，较并发标记时间短。</li>
+<li>4、并发清除</li>
 </ul>
 </li>
-<li><strong>2、修改本地hexo的配置文件</strong><ul>
-<li>2.1、首先进入自己的blog目录(即站点目录，我的命名是hexo)，打开该目录下的.config.yml文件<img src="/images/hexo/hexo.jpg"></li>
-<li>2.2、直接在_config.yml文件搜索deploy,可以找到如下图所示的内容  <img src="/images/hexo/deploy.jpg">
-  然后按照下面的描述修改即可。
-  ***注意：
-      1.每个冒号后面都有一个空格
-      2.repo的命令必须严格按照要求命名***
-  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span>: git</span><br><span class="line"><span class="comment"># 下面两种形式的地址任选一种</span></span><br><span class="line">repo: https://github.com/GitHub用户名/GitHub用户名.github.io.git</span><br><span class="line"><span class="comment"># repo: git@github.com:GitHub用户名/GitHub用户名.github.io.git</span></span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
+<li>3、并发标记和并发清除（耗时最长）过程都可以与用户线程一起并发执行。—— CMS收集器的内存回收过程是与用户线程一起并发执行的。</li>
+<li>4、CMS收集器的缺点：<ul>
+<li>1、CMS收集器对CPU资源非常敏感。(默认启动的回收线程数是(CPU数量 + 3)/4).解决办法：虚拟机提供了一种“增量式并发收集器”的CMS收集器变种(效果不明显，不值得提倡)。</li>
+<li>2、CMS收集器无法处理浮动垃圾，可能出现”Concurrent Mode Failure”失败(CMS运行期间预留的内存无法满足用户程序的需要)而导致另一次Full GC的产生。<br>浮动垃圾：在标记过程之后产生的垃圾，只能等待下一次GC的时候再次回收这些垃圾。</li>
+<li>3、手机结束后会有大量的碎片产生，无法找到足够大的连续空间给大对象分配内存，就需要提前触发一次Full GC。CMS收集器提供了<ul>
+<li>-XX:+UserCMSCompactAtFullCollection参数解决该问题，用于在内存空间不够的时候需要进行Full GC的时候开启内存碎片的合并整理过程(无法并发)。</li>
+<li>-XX:CMSFullGCsBeforeCompatction用于设置执行多少次不压缩的Full GC后，然后接着来一次压缩的。</li>
 </ul>
-</li>
-<li><strong>3、安装部署博客的插件</strong><ul>
-<li>3.1、在站点目录打开git bash命令行执行命令(我是hexo目录)  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-  <img src="/images/hexo/hexo-deployer.jpg"></li>
-<li>3.2、配置ssh,如果之前已配置，可以直接跳过</li>
-<li>3.3、使用命令$hexo d(hexo deploy)$即可成功部署博客</li>
-</ul>
-</li>
-<li><strong>4、浏览效果</strong><ul>
-<li>4.1、最后直接在浏览器输入(https://你的GitHub的用户名.github.io)即可访问你的博客主页了</li>
-<li>4.2、<a href="https://phantomabyss.github.io/">幻影</a>，这是我的博客，欢迎大家来踩踩。<br/>
-到这里就差不多结束了。。。。。
 </li>
 </ul>
 </li>
 </ul>
-<hr>
-<p>最后再说说对于<strong>每次执行hexo d命令时都需要输入账号和密码</strong>的问题，可以参考另一篇博客<a href="https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">解决每次部署到GitHub时都需要输入用户名和密码的问题</a></p>
-
+<h4 id="G1收集器"><a href="#G1收集器" class="headerlink" title="G1收集器"></a>G1收集器</h4><blockquote>
+<p>是以一款面向服务端应用的垃圾收集器。</p>
+</blockquote>
+<h5 id="G1收集器的特点"><a href="#G1收集器的特点" class="headerlink" title="G1收集器的特点"></a>G1收集器的特点</h5><p>&emsp;1、并行并发：利用多核CPU的硬件优势缩短停顿时间，原来执行GC动作需要停顿的java程序，G1可以并发让java程序继续执行。<br>&emsp;2、分代收集：采用不同的方式去处理新创建的对象以及已经存活了一段时间、熬过多次GC的旧对象。<br>&emsp;3、空间整合：G1整体是基于标记-整理算法实现的，局部是基于复制算法实现的，这就意味着G1在运行的时候不会产生大量的空间碎片，导致分配大对象时无法找到足够的内部直接开启下一次GC。<br>&emsp;4、可预测的停顿：通过建立可预测的停顿时间模型(避免在Java堆中进行全区域的垃圾收集)，能让使用者明确指定在一个长度为M毫秒的之间判断内，消耗在垃圾收集的时间不得超过N毫秒。</p>
+<h5 id="G1收集器在内存区域的分布"><a href="#G1收集器在内存区域的分布" class="headerlink" title="G1收集器在内存区域的分布"></a>G1收集器在内存区域的分布</h5><p>&emsp;1、G1之前的收集器都将收集的范围分为整个新生代或者老年代。<br>&emsp;2、G1将Java堆的内存分为多个大小相等的独立区域，虽然还是保留到了新生代和老年代，但是它们之间不是隔离的了，而是一部分Region(不需要连续)的集合。<br>&emsp;3、G1跟踪各个Region里面的垃圾堆积的价值大小(回收所获得的空间大小以及回收所需时间的经验值)，然后在后台维护一个优先列表，每次根据允许的收集时间，优先回收价值更大的Region。<br>&emsp;4、G1中的Region之间的对象引用以及其他收集器之间老年代与新生代之间的对象引用都是通过Remembered Set来避免全堆扫描的。</p>
+<h5 id="G1收集器的运作过程"><a href="#G1收集器的运作过程" class="headerlink" title="G1收集器的运作过程"></a>G1收集器的运作过程</h5><p>&emsp;1、初始标记:标记一下GC roots能直接关联的对象，并且修改TAMS(Next Top at Mark Start)的值，让下一阶段用户程序并发运行时，能在正确可用的Region对象中创建新对象，此时需要停顿线程(时间很短)。<br>&emsp;2、并发标记：从GC roots中开始对Java堆中进行可达性分析，找出存活的对象，此时耗时较长(但是可以和用户程序并发执行)。<br>&emsp;3、最终标记：修正在并发标记期间因用户程序继续运作而导致标记产生变动的标记记录，虚拟机将这段变化的内容记录在线程Remembered Set logs中，最后将其合并到Remembered Set中，该阶段需要停顿线程，但是可以并行执行。<br>&emsp;4、筛选回收：首先对各个Region的回收价值和成本进行排序，根据用户期望的GC停顿时间制定回收计划。</p>
+<h5 id="理解GC日志"><a href="#理解GC日志" class="headerlink" title="理解GC日志"></a>理解GC日志</h5>
     </div>
 
     
@@ -309,7 +288,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/" title="hexo博客部署到GitHub">https://phantomabyss.github.io/2019/09/20/hexo/hexo部署到博客/</a>
+    <a href="https://phantomabyss.github.io/2019/11/26/jvm/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/" title="垃圾收集器">https://phantomabyss.github.io/2019/11/26/jvm/垃圾收集器/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -321,8 +300,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
-              <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+              <a href="/tags/JVM/" rel="tag"><i class="fa fa-tag"></i> JVM</a>
           </div>
 
         
@@ -331,12 +309,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/09/20/hexo/hexo%E4%B8%AD%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E6%96%87%E7%AB%A0/" rel="prev" title="hexo如何删除文章">
-      <i class="fa fa-chevron-left"></i> hexo如何删除文章
+    <a href="/2019/11/21/jvm/%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%86%85%E5%AD%98/" rel="prev" title="自动内存管理机制">
+      <i class="fa fa-chevron-left"></i> 自动内存管理机制
     </a></div>
       <div class="post-nav-item">
-    <a href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="解决每次部署到GitHub时都需要输入用户名和密码的问题">
-      解决每次部署到GitHub时都需要输入用户名和密码的问题 <i class="fa fa-chevron-right"></i>
+    <a href="/2019/11/26/jvm/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6/" rel="next" title="内存分配与回收">
+      内存分配与回收 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -396,6 +374,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#收集器"><span class="nav-text">收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#CMS收集器"><span class="nav-text">CMS收集器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#G1收集器"><span class="nav-text">G1收集器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#G1收集器的特点"><span class="nav-text">G1收集器的特点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#G1收集器在内存区域的分布"><span class="nav-text">G1收集器在内存区域的分布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#G1收集器的运作过程"><span class="nav-text">G1收集器的运作过程</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#理解GC日志"><span class="nav-text">理解GC日志</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
