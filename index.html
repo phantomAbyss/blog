@@ -121,7 +121,7 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">2</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -159,7 +159,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/27/hexo03/">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -173,7 +173,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/09/27/hexo03/" class="post-title-link" itemprop="url">解决每次部署到GitHub时都需要输入用户名和密码的问题</a>
+            <a href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决每次部署到GitHub时都需要输入用户名和密码的问题</a>
         </h2>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-28 13:43:00" itemprop="dateModified" datetime="2019-09-28T13:43:00+08:00">2019-09-28</time>
+                <time title="修改时间：2020-05-15 17:45:32" itemprop="dateModified" datetime="2020-05-15T17:45:32+08:00">2020-05-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -208,7 +208,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>459</span>
+              <span>837</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -227,15 +227,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>前提：<br>    使用ssh连接的方式可以避免每次部署项目的时候需要输入用户名和密码的过程，同时也比较安全<br>因此就需要先配置<a href="https:/.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github的ssh密匙</a>哟，然后在进行后面的操作才有效哟<br>1.修改_config.yml文件，将部署方式从https方式修改为ssh，直接打开_config.yml搜索deployment即可<br>修改之前：<br>        <img src="https://phantomAbyss.github.io/images/hexo/hexo03/02.PNG" alt><br>修改之后：<br>        <img src="https://phantomAbyss.github.io/images/hexo/hexo03/03.PNG" alt><br>2.接下来直接在hexo的根目录下打开git bash命令行执行以下两条命令即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>    <span class="comment"># GitHub的用户名</span></span><br><span class="line">$ git config --global user.email <span class="string">"yourEmail"</span>  <span class="comment"># GitHub注册时你输入的邮箱</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://phantomAbyss.github.io/images/hexo/hexo03/01.png" alt><br>3.然后重新打开git bash命令行再次部署到GitHub即可</p>
-<p>到这里我的就行了，建议你们可以去试试。如果问题还没有解决，可以参考原博文的方法。</p>
-<p>以上内容参考于：<br>    <a href="https://zhidao.baidu.com/question/2121621163479338627.html" target="_blank" rel="noopener">为什么hexo用git部署到github上每次都要输入用户名和密码</a><br>    <a href="https://www.cnblogs.com/yaoel/p/5381826.html" target="_blank" rel="noopener">使用Github SSH Key来避免Hexo部署时输入账户密码</a><br>    <a href="https://blog.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github设置SSH登陆</a></p>
-
+          <p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/09/27/hexo03/#more" rel="contents">
+              <a class="btn" href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -262,7 +257,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo02/">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/author.jpg">
@@ -276,7 +271,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2019/09/20/hexo02/" class="post-title-link" itemprop="url">如何将博客上传到GitHub.io上</a>
+            <a href="/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">hexo博客部署到GitHub</a>
         </h2>
 
         <div class="post-meta">
@@ -293,7 +288,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-13 09:08:29" itemprop="dateModified" datetime="2020-05-13T09:08:29+08:00">2020-05-13</time>
+                <time title="修改时间：2020-05-15 17:11:26" itemprop="dateModified" datetime="2020-05-15T17:11:26+08:00">2020-05-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -311,7 +306,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>452</span>
+              <span>802</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -330,10 +325,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>jfksfjsl;fjsdl</p>
+          <p>本文简单介绍了一下hexo博客部署到GitHub上的步骤</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2019/09/20/hexo02/#more" rel="contents">
+              <a class="btn" href="/2019/09/20/hexo/hexo%E9%83%A8%E7%BD%B2%E5%88%B0%E5%8D%9A%E5%AE%A2/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -433,7 +428,7 @@
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -484,7 +479,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">1k</span>
+    <span title="站点总字数">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
