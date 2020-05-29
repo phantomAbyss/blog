@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"phantomabyss.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。 Jav">
+  <meta name="description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java内存区域">
 <meta property="og:url" content="https://phantomabyss.github.io/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/index.html">
 <meta property="og:site_name" content="幻影">
-<meta property="og:description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。 Jav">
+<meta property="og:description" content="Java虚拟机内存的各个区域程序计数器 当前线程的所执行的字节码的行号指示器——线程私有的内存  123* 1、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。* 2、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。* 3、线程执行Native方法时：计数器的值为空（Undefined）。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-11-16T14:29:23.000Z">
-<meta property="article:modified_time" content="2019-11-22T12:01:10.093Z">
+<meta property="article:modified_time" content="2020-05-29T15:40:59.739Z">
 <meta property="article:author" content="phantom">
 <meta property="article:tag" content="JVM">
 <meta name="twitter:card" content="summary">
@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-22 20:01:10" itemprop="dateModified" datetime="2019-11-22T20:01:10+08:00">2019-11-22</time>
+                <time title="修改时间：2020-05-29 23:40:59" itemprop="dateModified" datetime="2020-05-29T23:40:59+08:00">2020-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -243,6 +243,7 @@
 <p>当前线程的所执行的字节码的行号指示器——线程私有的内存</p>
 </blockquote>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。</span><br><span class="line">* <span class="number">2</span>、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。</span><br><span class="line">* <span class="number">3</span>、线程执行Native方法时：计数器的值为空（Undefined）。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h5 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a><strong><em>Java虚拟机栈</em></strong></h5><blockquote>
 <p>描述的是Java方法执行的内存模型——线程私有的内存。<br>生命周期与线程相同</p>
 </blockquote>
@@ -394,12 +395,16 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>

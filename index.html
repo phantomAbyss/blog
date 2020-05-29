@@ -182,10 +182,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-05 08:27:44 / 修改时间：10:04:30" itemprop="dateCreated datePublished" datetime="2019-12-05T08:27:44+08:00">2019-12-05</time>
+              <time title="创建时间：2019-12-05 08:27:44" itemprop="dateCreated datePublished" datetime="2019-12-05T08:27:44+08:00">2019-12-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:37:36" itemprop="dateModified" datetime="2020-05-29T23:37:36+08:00">2020-05-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -222,26 +228,7 @@
 
       
           <h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><blockquote>
-<p>1、如何在连接各种计算机的传输媒体上传输数据比特流。<br>2、尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到差异，从而使数据链路层只考虑完成本层的协议和服务。</p>
-</blockquote>
-<h5 id="主要任务"><a href="#主要任务" class="headerlink" title="主要任务"></a>主要任务</h5><blockquote>
-<p>描述为确定与传输媒体的接口有关的一些特性。</p>
-</blockquote>
-<ul>
-<li>1、<strong>机械特性</strong>：指明接口所用接线器的形状和尺寸、引脚数目、和排列、固定和锁定装置等。</li>
-<li>2、<strong>电气特性</strong>：指明在接口电缆的各条线上出现的电压范围。</li>
-<li>3、<strong>功能特性</strong>：指明某条线出现的某一电平的电压的意义。</li>
-<li>4、<strong>过程特性</strong>：指明对于不同功能的各种可能事件的出现顺序。</li>
-</ul>
-<p><strong>ps</strong>：</p>
-<ul>
-<li>1、数据在计算机内部多采用并行传输的方式。</li>
-<li>2、数据在通信线路上传输方式一般都是串行传输——逐个按照比特按照时间顺序传输</li>
-<li>3、物理层需要完成传输方式的转换</li>
-</ul>
-<h3 id="数据通信"><a href="#数据通信" class="headerlink" title="数据通信"></a>数据通信</h3><h4 id="数据通信系统"><a href="#数据通信系统" class="headerlink" title="数据通信系统"></a>数据通信系统</h4><blockquote>
-<p>主要由源系统(发送端，发送方)、传输系统(传输网络)和目的系统(接收端，接收方)组成</p>
-</blockquote>
+<p>1、如何在连接各种计算机的传输媒体上传输数据比特流。<br>2、尽可能地屏蔽掉传输媒体和通信手段的差异，使物理层上面的数据链路层感觉不到差异，从而使数据链路层只考虑完成本层的协议和服务。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/#more" rel="contents">
@@ -294,10 +281,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-01 11:39:09 / 修改时间：11:46:27" itemprop="dateCreated datePublished" datetime="2019-12-01T11:39:09+08:00">2019-12-01</time>
+              <time title="创建时间：2019-12-01 11:39:09" itemprop="dateCreated datePublished" datetime="2019-12-01T11:39:09+08:00">2019-12-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:38:05" itemprop="dateModified" datetime="2020-05-29T23:38:05+08:00">2020-05-29</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -324,15 +317,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>问题描述：SecureCRT连接虚拟机出现远程主机拒绝访问(忘记截图了呀。。。)</strong><br>我遇到的问题是主机和Linux可以相互ping通的情况下，使用SecureCRT连接Linux时拒绝访问主机，<br>如果您本机和Linuxping不通的话，可以先看看其他博客关于网络方面的配置。</p>
-<ul>
-<li>1、首先检查是否因为防火墙是否是否已经关闭<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">sudo</span> ufw status <span class="comment">#查看防火墙的状态</span></span><br></pre></td></tr></table></figure>
-ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="builtin-name">get</span> install ufw</span><br><span class="line"><span class="comment"># 顺便说说防火墙开启的命令吧</span></span><br><span class="line">sudo ufw enable</span><br><span class="line">sudo ufw<span class="built_in"> default </span>deny # 开启了防火墙并随系统启动同时关闭所有外部对本机的访问（本机访问外部正常）</span><br></pre></td></tr></table></figure></li>
-<li>2、如果没有关闭，Linux(Ubuntu)下关闭防火墙的命令为<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ufw <span class="built_in">disable</span> <span class="comment">#关闭防火墙</span></span><br></pre></td></tr></table></figure>
-2、Ubuntu没有安装SSH2的服务，可以在终端中使用apt命令安装：<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install openssh-<span class="keyword">server</span></span><br></pre></td></tr></table></figure>
-又是一个坑呀！！！！<br>本文参考<a href="https://blog.csdn.net/weixin_36989023/article/details/67061937" target="_blank" rel="noopener">windows下使用SecureCRT远程linux虚拟机出现主机拒绝访问的问题</a></li>
-</ul>
-
+          <p><strong>问题描述：SecureCRT连接虚拟机出现远程主机拒绝访问(忘记截图了呀。。。)</strong><br>我遇到的问题是主机和Linux可以相互ping通的情况下，使用SecureCRT连接Linux时拒绝访问主机，<br>如果您本机和Linuxping不通的话，可以先看看其他博客关于网络方面的配置。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/12/01/secureCRT/SecureCRT%E8%BF%9E%E6%8E%A5Linux%E6%97%B6%E6%8B%92%E7%BB%9D%E8%AE%BF%E9%97%AE/#more" rel="contents">
@@ -385,10 +370,16 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-12-01 08:39:35 / 修改时间：15:04:59" itemprop="dateCreated datePublished" datetime="2019-12-01T08:39:35+08:00">2019-12-01</time>
+              <time title="创建时间：2019-12-01 08:39:35" itemprop="dateCreated datePublished" datetime="2019-12-01T08:39:35+08:00">2019-12-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:38:33" itemprop="dateModified" datetime="2020-05-29T23:38:33+08:00">2020-05-29</time>
+              </span>
 
           <br>
             <span class="post-meta-item" title="本文字数">
@@ -419,13 +410,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 <p>主要有两个可视化工具：JConsole   VisualVM</p>
 </blockquote>
 <h5 id="JConsole：Java监视与管理控制台"><a href="#JConsole：Java监视与管理控制台" class="headerlink" title="JConsole：Java监视与管理控制台"></a>JConsole：Java监视与管理控制台</h5><blockquote>
-<p>1、基于JMX的可视化监视、管理工具<br>  2、功能：针对JMX MBean进行管理。<br>    &emsp;MBean可以使用代码、中间件服务器的管理控制台或者所有符合JMX规范的软件进行访问。</p>
-</blockquote>
-<ul>
-<li>1、使用jconsole.exe启动JConsole后，将自动搜索出本机运行的所有虚拟机的进程。</li>
-<li>2、</li>
-</ul>
-
+<p>1、基于JMX的可视化监视、管理工具<br>  2、功能：针对JMX MBean进行管理。<br>    &emsp;MBean可以使用代码、中间件服务器的管理控制台或者所有符合JMX规范的软件进行访问。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/12/01/jvm/%E6%95%85%E9%9A%9C%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/#more" rel="contents">
@@ -478,10 +463,16 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-28 20:01:08 / 修改时间：22:49:46" itemprop="dateCreated datePublished" datetime="2019-11-28T20:01:08+08:00">2019-11-28</time>
+              <time title="创建时间：2019-11-28 20:01:08" itemprop="dateCreated datePublished" datetime="2019-11-28T20:01:08+08:00">2019-11-28</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:38:54" itemprop="dateModified" datetime="2020-05-29T23:38:54+08:00">2020-05-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -518,143 +509,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 
       
           <h4 id="JDK命令行工具"><a href="#JDK命令行工具" class="headerlink" title="JDK命令行工具"></a>JDK命令行工具</h4><blockquote>
-<p>1、JDK的bin目录下其他命令行程序(exe文件)主要用于监视虚拟机和故障处理的工作。<br> 2、如果需要监控运行于JDK1.5的虚拟机之上的程序，在程序启动的时候需要添加参数“-Dcom.sun.management.jmxremote”开启JMX管理功能，否则部分基于JMX的工具无法使用。<br> 3、如果被监控程序运行于JDK1.6之上的虚拟机的JMX管理默认是开启的，虚拟机启动时不需要添加任何参数。</p>
-</blockquote>
-<ul>
-<li>主要有以下工具：<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">主要作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">jps</td>
-<td align="center">JVM Process Status Tool,显示指定系统内所有的HotSpot虚拟机进程</td>
-</tr>
-<tr>
-<td align="center">jstat</td>
-<td align="center">JVM Statistics Monitoring Tool,用于收集HotSpot虚拟机各方面的运行数据</td>
-</tr>
-<tr>
-<td align="center">jinfo</td>
-<td align="center">Configuration Info for Java,显示虚拟机配置信息</td>
-</tr>
-<tr>
-<td align="center">jmap</td>
-<td align="center">Memory Map for Java,生成虚拟机的内存转储快照(heapdump文件)</td>
-</tr>
-<tr>
-<td align="center">jhat</td>
-<td align="center">JVM Heap Dump Brower,用于分析heapdump文件</td>
-</tr>
-<tr>
-<td align="center">jstack</td>
-<td align="center">Stack Trace for Java,显示虚拟机的线程快照</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h5 id="jps-虚拟机进程状况工具"><a href="#jps-虚拟机进程状况工具" class="headerlink" title="jps:虚拟机进程状况工具"></a>jps:虚拟机进程状况工具</h5><blockquote>
-<p>功能：列出正在运行的虚拟机进程，并显示虚拟机执行主类(main()函数所在的类)名称以及这些进程的本地虚拟机唯一ID(LVMID)。<br>  命令格式：jps [ options ] [ hostid ]</p>
-</blockquote>
-<ul>
-<li>1、jps可以通过RMI协议查询开启了RMI服务的远程虚拟机进程状态，hostid为RMI注册表中注册的主机名。</li>
-<li>2、jps工具主要选项见下表：<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">-q</td>
-<td align="center">只输出LVMID，省略主类的名称</td>
-</tr>
-<tr>
-<td align="center">-m</td>
-<td align="center">输出虚拟机进程启动时传递给主类main()函数的参数</td>
-</tr>
-<tr>
-<td align="center">-l</td>
-<td align="center">输出主类的全名，如果进程执行的是jar包，输出Jar路径</td>
-</tr>
-<tr>
-<td align="center">-v</td>
-<td align="center">输出虚拟机进程启动时JVM参数</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h5 id="jstat-虚拟机统计信息监视工具"><a href="#jstat-虚拟机统计信息监视工具" class="headerlink" title="jstat:虚拟机统计信息监视工具"></a>jstat:虚拟机统计信息监视工具</h5><blockquote>
-<p>功能：<br>&emsp;1、用于监视虚拟机各种运行状态信息的命令行工作。<br>&emsp;2、可以显示本地或者远程虚拟机进程中的类装载、内存、垃圾收集、JIT编译等运行数据。</p>
-</blockquote>
-<ul>
-<li>1、命令格式：jstat [ option  vmid  [interval[s|ms]]  [count] ]<ul>
-<li>1、如果是本地虚拟机进程，VMID与LVMID一致，如果是远程虚拟机进程，VMID的格式为：[protocol:][//]lvmid[@hostname[:port]/servername]</li>
-<li>2、参数interval和count表示查询间隔与次数，如果省略表示值查询一次。<br>  如：jstat -gc 2764  250   20表示每250毫秒查询一次进程2764收集状况，一共查询20次。</li>
-<li>3、option表示用户希望查询的虚拟机信息，主要包含三类(类装载、垃圾收集运行期编译状况)</li>
-</ul>
-</li>
-<li>2、jstat工具主要选项见下表：<table>
-<thead>
-<tr>
-<th align="center">选项</th>
-<th align="center">作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">-class</td>
-<td align="center">监视类装载、卸载数量、总空间以及类装载所耗费的时间</td>
-</tr>
-<tr>
-<td align="center">-gc</td>
-<td align="center">监视Java堆状况，包括Eden区、老年代、永久代等的容量、已用空间、GC时间合计等信息</td>
-</tr>
-<tr>
-<td align="center">-gccapacity</td>
-<td align="center">监视内容与-gc基本相同，但输出主要关注Java堆各个区域使用到的最大、最小空间</td>
-</tr>
-<tr>
-<td align="center">-gcutil</td>
-<td align="center">监视内容与-gc基本相同，但输出主要关注已使用空间占总空间的百分比</td>
-</tr>
-<tr>
-<td align="center">-gccause</td>
-<td align="center">与-gcutil功能一样，但是额外输出导致上一次GC产生的原因</td>
-</tr>
-<tr>
-<td align="center">-gcnew</td>
-<td align="center">监视新生代GC状况</td>
-</tr>
-<tr>
-<td align="center">-gcnewcapacity</td>
-<td align="center">监视内容与-gcnew基本相同，输出主要关注使用的最大、最小空间</td>
-</tr>
-<tr>
-<td align="center">-gccold</td>
-<td align="center">监视老年代GC状况</td>
-</tr>
-<tr>
-<td align="center">-gccoldcapacity</td>
-<td align="center">监视内容基本-gccold基本相同，输出关注使用到的最大、最小空间</td>
-</tr>
-<tr>
-<td align="center">-gcpermcapacity</td>
-<td align="center">输出永久代使用到的最大、最小空间</td>
-</tr>
-<tr>
-<td align="center">-complier</td>
-<td align="center">输出JIT编译器编译过的方法、耗时等信息</td>
-</tr>
-<tr>
-<td align="center">-printcompilation</td>
-<td align="center">输出已经被JIT编译的方法</td>
-</tr>
-</tbody></table>
-</li>
-</ul>
-<h5 id="jinfo-Java配置信息工具"><a href="#jinfo-Java配置信息工具" class="headerlink" title="jinfo:Java配置信息工具"></a>jinfo:Java配置信息工具</h5>
+<p>1、JDK的bin目录下其他命令行程序(exe文件)主要用于监视虚拟机和故障处理的工作。<br> 2、如果需要监控运行于JDK1.5的虚拟机之上的程序，在程序启动的时候需要添加参数“-Dcom.sun.management.jmxremote”开启JMX管理功能，否则部分基于JMX的工具无法使用。<br> 3、如果被监控程序运行于JDK1.6之上的虚拟机的JMX管理默认是开启的，虚拟机启动时不需要添加任何参数。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/28/jvm/%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7/#more" rel="contents">
@@ -905,10 +760,16 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-26 19:03:05 / 修改时间：20:18:08" itemprop="dateCreated datePublished" datetime="2019-11-26T19:03:05+08:00">2019-11-26</time>
+              <time title="创建时间：2019-11-26 19:03:05" itemprop="dateCreated datePublished" datetime="2019-11-26T19:03:05+08:00">2019-11-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:39:21" itemprop="dateModified" datetime="2020-05-29T23:39:21+08:00">2020-05-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -945,11 +806,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 
       
           <h4 id="内存分配"><a href="#内存分配" class="headerlink" title="内存分配"></a>内存分配</h4><blockquote>
-<p>内存分配主要是在堆上(也有可能经过JIT编译器拆散为标量类型间接地在栈上分配)，对象主要分配在新生代的Eden上，如果启动了本地线程分配缓冲，则按线程优先在TLAB上分配。当时少数情况也可以直接分配在老年代中。</p>
-</blockquote>
-<h5 id="对象优先在Eden上分配"><a href="#对象优先在Eden上分配" class="headerlink" title="对象优先在Eden上分配"></a>对象优先在Eden上分配</h5><p>&emsp;1、多数情况下，对象在新生代Eden中分配<br>&emsp;2、Eden中内存不够时虚拟机就会发起一次Minor GC<br>&emsp;3、虚拟机提供-XX:+PrintGCDdtails告诉虚拟机在发生垃圾收集行为时，打印内存回收日志以及进程退出时内存各区域的分配情况。<br>&emsp;4、大对象直接进入老年代：大对象即大量连续内存空间的Java对象。如果经常出现大对象就需要内存还有没有使用的空间的时候就提前触发垃圾收集以获取足够的连续空间来安置。<br>&emsp;5、虚拟机提供了-XX:PretenureSizeThreshold参数(只对Serial和ParNew两款收集器有效)使大于设置值的对象直接在老年代分配，避免在Eden区以及两个Survivor区之间发生大量的内存复制。 —— 新生代采用复制算法收集。<br>&emsp;6、长期存活的对象将进入老年代：虚拟机给每个对象都定义了一个对象年龄计数器，如果对象在Eden出生后并经过一次Minor后仍然存活，并且能被Survivor容纳的话将被移到Survivor空间中，并且把计数器的值设为1，此后没熬过一岁，它的年龄就增加1，当增加到了一定的程度就会被晋升到老年代中，参数-XX:MaxTenuringThreshold可以设置晋升到老年代的阈值。<br>&emsp;7、动态对象年龄判定：如果Survivor空间中相同年龄所有对象大小的总和大于Survivor空间的一半，年龄大于或者等于该年龄的对象就可以直接进入老年代。<br>&emsp;8、空间分配担保：进行Minor之前，需要检查老年代最大可用的连续空间是否大于新生代所有对象总空间，如果成立，则此次的Minor是安全的，如果不成立，虚拟机就会查看HandlePromotionFailure设置值是否允许担保失败，如果允许，接着就会检查老年代最大可用的连续空间是否大于历次晋升到老年代对象的平均大小，如果大于，就会”冒险”进行一次Minor GC，如果小于，就不允许冒险，进行一次Full GC.</p>
-<h5 id="Minor-GC-和-Full-GC"><a href="#Minor-GC-和-Full-GC" class="headerlink" title="Minor GC 和 Full GC"></a>Minor GC 和 Full GC</h5><p>&emsp;Minor GC:新生代GC，指发生在新生代的垃圾收集动作，大多数的Java对象都是朝生夕灭，因此Monitor GC非常频繁，一般回收速度也比较快。<br>&emsp;Full GC(Major GC):老年代GC，指发生在老年代的GC，出现了Full GC,经常会伴随至少一次Minor GC,Major GC的速度一般会比Minor GC慢1倍以上。</p>
-
+<p>内存分配主要是在堆上(也有可能经过JIT编译器拆散为标量类型间接地在栈上分配)，对象主要分配在新生代的Eden上，如果启动了本地线程分配缓冲，则按线程优先在TLAB上分配。当时少数情况也可以直接分配在老年代中。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/26/jvm/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6/#more" rel="contents">
@@ -1002,10 +859,16 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2019-11-26 14:25:19 / 修改时间：20:48:30" itemprop="dateCreated datePublished" datetime="2019-11-26T14:25:19+08:00">2019-11-26</time>
+              <time title="创建时间：2019-11-26 14:25:19" itemprop="dateCreated datePublished" datetime="2019-11-26T14:25:19+08:00">2019-11-26</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-29 23:39:43" itemprop="dateModified" datetime="2020-05-29T23:39:43+08:00">2020-05-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1045,31 +908,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 <p>是一种以获取最短回收停顿时间为目标的收集器。</p>
 </blockquote>
 <ul>
-<li>1、CMS收集器是基于标记-清楚算法实现的。</li>
-<li>2、运作过程：<ul>
-<li>1、初始标记：标记GC roots能直接关联的对象，速度快。</li>
-<li>2、并发标记：进行GCTracing的过程</li>
-<li>3、重新标记：为了修正并发标记期间因用户程序继续运作而导致标记变动的那一部分对象的标记记录，停顿时间较初始标记稍长，较并发标记时间短。</li>
-<li>4、并发清除</li>
-</ul>
-</li>
-<li>3、并发标记和并发清除（耗时最长）过程都可以与用户线程一起并发执行。—— CMS收集器的内存回收过程是与用户线程一起并发执行的。</li>
-<li>4、CMS收集器的缺点：<ul>
-<li>1、CMS收集器对CPU资源非常敏感。(默认启动的回收线程数是(CPU数量 + 3)/4).解决办法：虚拟机提供了一种“增量式并发收集器”的CMS收集器变种(效果不明显，不值得提倡)。</li>
-<li>2、CMS收集器无法处理浮动垃圾，可能出现”Concurrent Mode Failure”失败(CMS运行期间预留的内存无法满足用户程序的需要)而导致另一次Full GC的产生。<br>浮动垃圾：在标记过程之后产生的垃圾，只能等待下一次GC的时候再次回收这些垃圾。</li>
-<li>3、手机结束后会有大量的碎片产生，无法找到足够大的连续空间给大对象分配内存，就需要提前触发一次Full GC。CMS收集器提供了<ul>
-<li>-XX:+UserCMSCompactAtFullCollection参数解决该问题，用于在内存空间不够的时候需要进行Full GC的时候开启内存碎片的合并整理过程(无法并发)。</li>
-<li>-XX:CMSFullGCsBeforeCompatction用于设置执行多少次不压缩的Full GC后，然后接着来一次压缩的。</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="G1收集器"><a href="#G1收集器" class="headerlink" title="G1收集器"></a>G1收集器</h4><blockquote>
-<p>是以一款面向服务端应用的垃圾收集器。</p>
-</blockquote>
-<h5 id="G1收集器的特点"><a href="#G1收集器的特点" class="headerlink" title="G1收集器的特点"></a>G1收集器的特点</h5><p>&emsp;1、并行并发：利用多核CPU的硬件优势缩短停顿时间，原来执行GC动作需要停顿的java程序，G1可以并发让java程序继续执行。<br>&emsp;2、分代收集：采用不同的方式去处理新创建的对象以及已经存活了一段时间、熬过多次GC的旧对象。<br>&emsp;3、空间整合：G1整体是基于标记-整理算法实现的，局部是基于复制算法实现的，这就意味着G1在运行的时候不会产生大量的空间碎片，导致分配大对象时无法找到足够的内部直接开启下一次GC。<br>&emsp;4、可预测的停顿：通过建立可预测的停顿时间模型(避免在Java堆中进行全区域的垃圾收集)，能让使用者明确指定在一个长度为M毫秒的之间判断内，消耗在垃圾收集的时间不得超过N毫秒。</p>
-<h5 id="G1收集器在内存区域的分布"><a href="#G1收集器在内存区域的分布" class="headerlink" title="G1收集器在内存区域的分布"></a>G1收集器在内存区域的分布</h5><p>&emsp;1、G1之前的收集器都将收集的范围分为整个新生代或者老年代。<br>&emsp;2、G1将Java堆的内存分为多个大小相等的独立区域，虽然还是保留到了新生代和老年代，但是它们之间不是隔离的了，而是一部分Region(不需要连续)的集合。<br>&emsp;3、G1跟踪各个Region里面的垃圾堆积的价值大小(回收所获得的空间大小以及回收所需时间的经验值)，然后在后台维护一个优先列表，每次根据允许的收集时间，优先回收价值更大的Region。<br>&emsp;4、G1中的Region之间的对象引用以及其他收集器之间老年代与新生代之间的对象引用都是通过Remembered Set来避免全堆扫描的。</p>
+<li>1、CMS收集器是基于标记-清楚算法实现的。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/26/jvm/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/#more" rel="contents">
@@ -1130,7 +969,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-26 18:26:00" itemprop="dateModified" datetime="2019-11-26T18:26:00+08:00">2019-11-26</time>
+                <time title="修改时间：2020-05-29 23:40:14" itemprop="dateModified" datetime="2020-05-29T23:40:14+08:00">2020-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1168,42 +1007,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 
       
           <h4 id="自动内存管理机制"><a href="#自动内存管理机制" class="headerlink" title="自动内存管理机制"></a>自动内存管理机制</h4><h5 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h5><ul>
-<li><p>1、定义：给对象添加一个引用计数器，每当一个地方引用的时候，计数器值就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能在被使用的。</p>
-</li>
-<li><p>2、引用计数存在的问题(见以下的样例)：<br>  但是主流的Java虚拟机里面没有使用引用计数算法来管理内存，主要原因是因为引用计数算法很难解决对象之间相互循环引用的问题。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> memoryManage;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReferenceCountingGC</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> Object instance = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> _1MB = <span class="number">1024</span> * <span class="number">1024</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 这个成员属性的作用的占点内存，以便在GC日志中看清楚是否被回收过</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">byte</span>[] bigSize = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2</span> * _1MB];</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">testGC</span><span class="params">()</span></span>&#123;</span><br><span class="line">		ReferenceCountingGC objA = <span class="keyword">new</span> ReferenceCountingGC();</span><br><span class="line">		ReferenceCountingGC objB = <span class="keyword">new</span> ReferenceCountingGC();</span><br><span class="line">		objA.instance = objB;</span><br><span class="line">		objB.instance = objA;</span><br><span class="line"></span><br><span class="line">		objA = <span class="keyword">null</span>;</span><br><span class="line">		objB = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//GC</span></span><br><span class="line">		System.gc();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ReferenceCountingGC.testGC();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h5></li>
-<li><p>1、定义：通过可达性分析来判断对象是否存活的。（Java、C#、Lisp）</p>
-</li>
-<li><p>2、算法思路：通过一系列称为“GC roots”的对象作为起始点，并以此节点向下搜索，搜索走过的路径为引用链，当一个对象到GC roots没有任何引用链时，则说明此对象是不可用的。</p>
-</li>
-<li><p>3、Java中可以作为GC roots的对象有：</p>
-<ul>
-<li>a、虚拟机栈（栈帧中的本地变量表）中引用的对象。</li>
-<li>b、方法区中类静态属性引用的对象。</li>
-<li>c、方法区中常量引用的对象。</li>
-<li>d、本地方法栈中JNI（Native方法）引用的对象。</li>
-</ul>
-</li>
-</ul>
-<h5 id="引用："><a href="#引用：" class="headerlink" title="引用："></a>引用：</h5><p>&emsp;<strong>强引用 &gt; 软引用 &gt; 弱引用 &gt; 虚引用</strong></p>
-<ul>
-<li>1、强引用：如“Object obj = new Object();”;只用强引用存在，垃圾收集器就不会回收被引用的对象。</li>
-<li>2、软引用：描述一些还有用但并非必需的对象，在内存将要发生内存溢出之前，垃圾收集器会对这些对象进行二次回收（第一次回收已死的对象），如果这次回收内存还是不够，就会跑出内存溢出异常。(SoftReference类实现弱引用)</li>
-<li>3、弱引用：描述一些非必需的对象，被弱引用关联的对象只能生存到下一次垃圾回收之前，无论内存是否足够使用，弱引用关联的对象都会被回收。(WeakReference类来实现弱引用)</li>
-<li>4、虚引用：也称为幽灵引用或者幻影引用，虚引用不会对对象的生存时间造成影响，也无法通过虚引用来取得一个对象实例。为一个对象设置虚引用关联的目的是能在这个对象被垃圾收集器回收时收到一个系统通知。(PhantomReference类实现虚引用)</li>
-</ul>
-<h5 id="一个对象的死亡至少要经历两次标记过程"><a href="#一个对象的死亡至少要经历两次标记过程" class="headerlink" title="一个对象的死亡至少要经历两次标记过程:"></a>一个对象的死亡至少要经历两次标记过程:</h5><ul>
-<li><p>1、如果对象在执行可达性分析后没有与GCroots相连的引用链，就会被打上第一次标记并且进行一次筛选，</p>
-<pre><code>筛选条件是：此对象是否有必要执行finalize()方法。(当对象没有覆盖finalize()方法或者虚拟机之前已经调用过该方法了，虚拟机将这两种情况都当做“没有必要执行”)</code></pre></li>
-<li><p>2、如果对象的finalize()方法有必要执行，则将其放入一个名为F-Queue的队列中，稍后由一个Finalizer线程(虚拟机自动建立、低优先级)去执行它——既虚拟机会触发这个方法执行，但是不会等待它执行结束(防止finalize()方法执行缓慢或者陷入死循环)</p>
-</li>
-<li><p>3、如果对象在finalize()方法中重新与引用链上的任何一个对象建立了关系，那么在第二次标记的时候就被移出即将回收的集合。否则就被垃圾收集器回收。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> memoryManage;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 以下代码的作用：</span></span><br><span class="line"><span class="comment"> * 	1、对象可以再被GC时自我拯救</span></span><br><span class="line"><span class="comment"> * 	2、但是只可以自救一次，因为一个对象的finalize()方法只会被虚拟机调用一次</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Administrator</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FinalizeEscapeGC</span> </span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> FinalizeEscapeGC SAVE_HOOK = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">isAlive</span><span class="params">()</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"yes,I am still alive;"</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">		<span class="keyword">super</span>.finalize();</span><br><span class="line">		System.out.println(<span class="string">"finalize method executed"</span>);</span><br><span class="line">		FinalizeEscapeGC.SAVE_HOOK = <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">		SAVE_HOOK = <span class="keyword">new</span> FinalizeEscapeGC();</span><br><span class="line"></span><br><span class="line">		<span class="comment">//对象第一次拯救自己</span></span><br><span class="line">		SAVE_HOOK = <span class="keyword">null</span>;</span><br><span class="line">		System.gc();</span><br><span class="line">		<span class="comment">//finalize方法的优先级较低，暂停0.5秒以等待它</span></span><br><span class="line">		Thread.sleep(<span class="number">500</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(SAVE_HOOK != <span class="keyword">null</span>)&#123;</span><br><span class="line">			SAVE_HOOK.isAlive();</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			System.out.println(<span class="string">"no,I am dead;"</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">/**</span></span><br><span class="line"><span class="comment">		 * 下面的代码与上面是一致的，但是这次自救会失败</span></span><br><span class="line"><span class="comment">		 * 因为任何一个对象的finalize方法只会被系统自动调用一次</span></span><br><span class="line"><span class="comment">		 * 如果该对象下次再次被回收时，finalize方法就不会再次执行了，自救也就失败了</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		SAVE_HOOK = <span class="keyword">null</span>;</span><br><span class="line">		System.gc();</span><br><span class="line">		<span class="comment">//finalize方法的优先级比较低，暂停0.5秒等地</span></span><br><span class="line">		Thread.sleep(<span class="number">500</span>);</span><br><span class="line">		<span class="keyword">if</span>(SAVE_HOOK != <span class="keyword">null</span>)&#123;</span><br><span class="line">			SAVE_HOOK.isAlive();</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			System.out.println(<span class="string">"no,I am dead"</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="回收方法区：回收的效率很低，主要回收废弃常量和无用的类。"><a href="#回收方法区：回收的效率很低，主要回收废弃常量和无用的类。" class="headerlink" title="回收方法区：回收的效率很低，主要回收废弃常量和无用的类。"></a>回收方法区：回收的效率很低，主要回收废弃常量和无用的类。</h5><h6 id="无用的类需要满足的条件："><a href="#无用的类需要满足的条件：" class="headerlink" title="无用的类需要满足的条件："></a>无用的类需要满足的条件：</h6>
+<li><p>1、定义：给对象添加一个引用计数器，每当一个地方引用的时候，计数器值就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能在被使用的。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/21/jvm/%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%86%85%E5%AD%98/#more" rel="contents">
@@ -1264,7 +1068,7 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-22 20:01:10" itemprop="dateModified" datetime="2019-11-22T20:01:10+08:00">2019-11-22</time>
+                <time title="修改时间：2020-05-29 23:40:59" itemprop="dateModified" datetime="2020-05-29T23:40:59+08:00">2020-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1305,14 +1109,6 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
 <p>当前线程的所执行的字节码的行号指示器——线程私有的内存</p>
 </blockquote>
 <figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。</span><br><span class="line">* <span class="number">2</span>、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。</span><br><span class="line">* <span class="number">3</span>、线程执行Native方法时：计数器的值为空（Undefined）。</span><br></pre></td></tr></table></figure>
-<h5 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a><strong><em>Java虚拟机栈</em></strong></h5><blockquote>
-<p>描述的是Java方法执行的内存模型——线程私有的内存。<br>生命周期与线程相同</p>
-</blockquote>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、每个方法在执行的同时都会创建一个栈帧用于存储局部变量表(栈内存)、操作数栈、动态链接、方法出口等信息。</span><br><span class="line">* <span class="number">2</span>、局部变量表存储八种基本数据类型(*<span class="built_in">bool</span>ean,byte,char,short,<span class="built_in">int</span>,<span class="built_in">float</span>,<span class="built_in">double</span>,long*)、对象引用类型(*<span class="built_in">ref</span>erence*类型)、*returnAddress*类型。</span><br><span class="line">   * <span class="built_in">ref</span>erence类型：可能是一个指向对象起始地址的引用指针，也可能是一个指向一个代表对象的句柄或其他与此对象相关的位置。</span><br><span class="line">* <span class="number">3</span>、$调用\stackrel&#123;方法&#125;&#123;\longrightarrow&#125;完成\stackrel&#123;等价于&#125;&#123;\Longrightarrow&#125;入栈\stackrel&#123;栈帧&#125;&#123;\longrightarrow&#125;出栈(虚拟机栈)$</span><br><span class="line">* <span class="number">4</span>、局部变量表所需的内存空间在编译期间完成分配，运行期间不会改变。</span><br><span class="line">* <span class="number">5</span>、Java虚拟机对该区域定义的两种异常规范：</span><br><span class="line">  * <span class="number">1</span>、线程请求的栈深度大于虚拟机所允许的深度。——*StackOverflowError*</span><br><span class="line">  * <span class="number">2</span>、若虚拟机支持扩展后任然无法申请到足够的内存。——*OutofMemeoryError*</span><br></pre></td></tr></table></figure>
-<h5 id="本地方法栈"><a href="#本地方法栈" class="headerlink" title="本地方法栈"></a><strong><em>本地方法栈</em></strong></h5><blockquote>
-<p>为虚拟机使用的Native方法服务，具体的虚拟机可以对其自由实现。</p>
-</blockquote>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、HotSpot将本地方法栈与虚拟机栈合二为一了。</span><br><span class="line">* <span class="number">2</span>、本地方法栈的两种异常规范与虚拟机栈相同。</span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/#more" rel="contents">
@@ -1414,12 +1210,16 @@ ps:如果ufw命令使用不了，可以使用以下命令进行安装：<figure 
         </a>
       </div>
       <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
         <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span>
+        <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">标签</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
