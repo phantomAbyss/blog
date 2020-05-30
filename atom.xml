@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://phantomabyss.github.io/"/>
-  <updated>2020-05-29T15:37:36.199Z</updated>
+  <updated>2020-05-30T03:14:26.335Z</updated>
   <id>https://phantomabyss.github.io/</id>
   
   <author>
@@ -15,6 +15,101 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>递归下降分析器</title>
+    <link href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E9%80%92%E5%BD%92%E4%B8%8B%E9%99%8D%E5%88%86%E6%9E%90%E5%99%A8/"/>
+    <id>https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E9%80%92%E5%BD%92%E4%B8%8B%E9%99%8D%E5%88%86%E6%9E%90%E5%99%A8/</id>
+    <published>2020-05-30T02:18:52.000Z</published>
+    <updated>2020-05-30T03:14:26.335Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="递归下降分析器"><a href="#递归下降分析器" class="headerlink" title="递归下降分析器"></a>递归下降分析器</h4><blockquote><ul><li>1、分析程序有一组子程序组成，对每一语法单位(非终结符)构造一个相应的子程序，识别对应的语法单位。</li><li>2、通过子程序之间的相互调用实现对输入串的识别</li><li>3、文法的定义通常是递归的，通常具有递归结构</li></ul></blockquote><h5 id="定义全局过程和变量"><a href="#定义全局过程和变量" class="headerlink" title="定义全局过程和变量"></a>定义全局过程和变量</h5><ul><li>1、ADVANCE：把输入串指示器IP指向下一个输入符号，即读入一个单词符号</li><li>2、SYM，IP当前所指的输入符号</li><li>3、ERROR，出错处理子程序<h5 id="递归下降子程序的设计"><a href="#递归下降子程序的设计" class="headerlink" title="递归下降子程序的设计"></a>递归下降子程序的设计</h5><h5 id="扩充的巴克斯范式"><a href="#扩充的巴克斯范式" class="headerlink" title="扩充的巴克斯范式"></a>扩充的巴克斯范式</h5></li><li>1、在元符号“→”或”=”和”|”的基础上,扩充了几个元语言符号：<ul><li>1、用花括号{α}表示闭包运算α<sup>*</li><li>2、用表示{α}<sub>0</sub><sup>n</sup>可任意重复0至n次</li><li>3、用方括号[α]表示{α}<sub>0</sub><sup>1,即表示<code>α</code>的出现可有可无(α|ε)<h5 id="语法图"><a href="#语法图" class="headerlink" title="语法图"></a>语法图</h5><h5 id="JavaCC"><a href="#JavaCC" class="headerlink" title="JavaCC"></a>JavaCC</h5><blockquote><p>可以自动产生一个自上而下的递归下降的语法分析程序(java实现)</p></blockquote></li></ul></li></ul><p><a href="http://javacc.java.net/" target="_blank" rel="noopener">Java Complier Complier</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;递归下降分析器&quot;&gt;&lt;a href=&quot;#递归下降分析器&quot; class=&quot;headerlink&quot; title=&quot;递归下降分析器&quot;&gt;&lt;/a&gt;递归下降分析器&lt;/h4&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1、分析程序有一组子程序组成，对每一语法单位(非终结符)构造一个相应的子程序，识别对应的语法单位。&lt;/li&gt;
+&lt;li&gt;2、通过子程序之间的相互调用实现对输入串的识别&lt;/li&gt;
+&lt;li&gt;3、文法的定义通常是递归的，通常具有递归结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;定义全局过程和变量&quot;&gt;&lt;a href=&quot;#定义全局过程和变量&quot; class=&quot;headerlink&quot; title=&quot;定义全局过程和变量&quot;&gt;&lt;/a&gt;定义全局过程和变量&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;1、ADVANCE：把输入串指示器IP指向下一个输入符号，即读入一个单词符号&lt;/li&gt;
+&lt;li&gt;2、SYM，IP当前所指的输入符号&lt;/li&gt;
+&lt;li&gt;3、ERROR，出错处理子程序&lt;h5 id=&quot;递归下降子程序的设计&quot;&gt;&lt;a href=&quot;#递归下降子程序的设计&quot; class=&quot;headerlink&quot; title=&quot;递归下降子程序的设计&quot;&gt;&lt;/a&gt;递归下降子程序的设计&lt;/h5&gt;&lt;h5 id=&quot;扩充的巴克斯范式&quot;&gt;&lt;a href=&quot;#扩充的巴克斯范式&quot; class=&quot;headerlink&quot; title=&quot;扩充的巴克斯范式&quot;&gt;&lt;/a&gt;扩充的巴克斯范式&lt;/h5&gt;&lt;/li&gt;
+&lt;li&gt;1、在元符号“→”或”=”和”|”的基础上,扩充了几个元语言符号：&lt;ul&gt;
+&lt;li&gt;1、用花括号{α}表示闭包运算α&lt;sup&gt;*&lt;/sup&gt;&lt;/li&gt;
+&lt;li&gt;2、用表示{α}&lt;sub&gt;0&lt;/sub&gt;&lt;sup&gt;n&lt;/sup&gt;可任意重复0至n次&lt;/li&gt;
+&lt;li&gt;3、用方括号[α]表示{α}&lt;sub&gt;0&lt;/sub&gt;&lt;sup&gt;1,即表示&lt;code&gt;α&lt;/code&gt;的出现可有可无(α|ε)&lt;h5 id=&quot;语法图&quot;&gt;&lt;a href=&quot;#语法图&quot; class=&quot;headerlink&quot; title=&quot;语法图&quot;&gt;&lt;/a&gt;语法图&lt;/h5&gt;&lt;h5 id=&quot;JavaCC&quot;&gt;&lt;a href=&quot;#JavaCC&quot; class=&quot;headerlink&quot; title=&quot;JavaCC&quot;&gt;&lt;/a&gt;JavaCC&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;可以自动产生一个自上而下的递归下降的语法分析程序(java实现)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/sup&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&quot;http://javacc.java.net/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Java Complier Complier&lt;/a&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自上而下分析</title>
+    <link href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%87%AA%E4%B8%8A%E8%80%8C%E4%B8%8B%E5%88%86%E6%9E%90/"/>
+    <id>https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%87%AA%E4%B8%8A%E8%80%8C%E4%B8%8B%E5%88%86%E6%9E%90/</id>
+    <published>2020-05-30T01:58:01.000Z</published>
+    <updated>2020-05-30T02:18:32.024Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="自上而下分析"><a href="#自上而下分析" class="headerlink" title="自上而下分析"></a>自上而下分析</h3><h4 id="构造不带回溯的自上而下的分析算法"><a href="#构造不带回溯的自上而下的分析算法" class="headerlink" title="构造不带回溯的自上而下的分析算法"></a>构造不带回溯的自上而下的分析算法</h4><h5 id="消除文法的左递归"><a href="#消除文法的左递归" class="headerlink" title="消除文法的左递归"></a>消除文法的左递归<a id="more"></a></h5><h5 id="提取做公共因子，克服回溯"><a href="#提取做公共因子，克服回溯" class="headerlink" title="提取做公共因子，克服回溯"></a>提取做公共因子，克服回溯</h5><h4 id="计算FIRST和FOLLOW集合"><a href="#计算FIRST和FOLLOW集合" class="headerlink" title="计算FIRST和FOLLOW集合"></a>计算FIRST和FOLLOW集合</h4><h4 id="LL-1-文法"><a href="#LL-1-文法" class="headerlink" title="LL(1)文法"></a>LL(1)文法</h4><h5 id="LL-1-文法的条件"><a href="#LL-1-文法的条件" class="headerlink" title="LL(1)文法的条件"></a>LL(1)文法的条件</h5><ul><li>1、文法不含左递归</li><li>2、对于文法中每一个非终结符A的各个产生式的候选首符集两两不交，如A → α<sub>1</sub> | α<sub>2</sub> | … α<sub>n</sub>,则FIRST(α<sub>i</sub>) ∩ FIRST(α<sub>i</sub>) = ∅ (i ≠ j)</li><li>3、对文法中的每个非终结符A，若它存在某个候选首符集包含<code>ε</code>，则FIRST(α<sub>i</sub>) ∩ FIRST(A) = ∅ (i ≠ j),i = 1, 2, 3…, n</li></ul><p>如果一个文法G满足以上条件，则称该文法G为LL(1)文法</p><h5 id="LL-1-分析法"><a href="#LL-1-分析法" class="headerlink" title="LL(1)分析法"></a>LL(1)分析法</h5><blockquote><p>假设要用非终结符A进行匹配，面临的输入符号为a，A的所有产生式为A → α<sub>1</sub> | α<sub>2</sub> | … α<sub>n</sub></p></blockquote><ul><li>1、若a ∈ FIRST(α<sub>i</sub>),则指派α<sub>i</sub>执行分配任务；</li><li>2、若<code>a</code>不属于任何一个候选首符集，则：<ul><li>1、若<code>ε</code>属于某个FIRST(α<sub>i</sub>)且<code>a ∈ FIRST(A)</code>,则让<code>A</code>与 <code>ε</code>自动匹配。</li><li>2、否则，<code>a</code>的出现就是一种语法错误。</li></ul></li></ul><h5 id="LL-1-文法分析方法"><a href="#LL-1-文法分析方法" class="headerlink" title="LL(1)文法分析方法"></a>LL(1)文法分析方法</h5><ul><li>1、递归下降分析器</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;自上而下分析&quot;&gt;&lt;a href=&quot;#自上而下分析&quot; class=&quot;headerlink&quot; title=&quot;自上而下分析&quot;&gt;&lt;/a&gt;自上而下分析&lt;/h3&gt;&lt;h4 id=&quot;构造不带回溯的自上而下的分析算法&quot;&gt;&lt;a href=&quot;#构造不带回溯的自上而下的分析算法&quot; class=&quot;headerlink&quot; title=&quot;构造不带回溯的自上而下的分析算法&quot;&gt;&lt;/a&gt;构造不带回溯的自上而下的分析算法&lt;/h4&gt;&lt;h5 id=&quot;消除文法的左递归&quot;&gt;&lt;a href=&quot;#消除文法的左递归&quot; class=&quot;headerlink&quot; title=&quot;消除文法的左递归&quot;&gt;&lt;/a&gt;消除文法的左递归
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FIRST-FOLLOW集合</title>
+    <link href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/FIRST-FOLLOW%E9%9B%86%E5%90%88/"/>
+    <id>https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/FIRST-FOLLOW%E9%9B%86%E5%90%88/</id>
+    <published>2020-05-30T00:23:55.000Z</published>
+    <updated>2020-05-30T01:58:27.582Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、构造每个文法符号的FIRST集合"><a href="#一、构造每个文法符号的FIRST集合" class="headerlink" title="一、构造每个文法符号的FIRST集合"></a>一、构造每个文法符号的FIRST集合</h3><blockquote><p>对于每个X-∈V<sub>T</sub>∪V<sub>N</sub>,连续使用下面的规则，直至每个FIRST集合不再增大为止：<br><strong>ps</strong>:V<sub>T</sub>表示非终结符集合，V<sub>N</sub>表示终结符集合</p></blockquote><ul><li>1、若X∈V<sub>T</sub>，那么<code>FIRST(X) =  {X}</code><a id="more"></a></li><li>2、若X∈V<sub>N</sub>, 且有产生式X→a…,则把a加入到<code>FIRST(X)</code>中，若<code>X → ε</code>也是一条产生式，则把<code>ε</code>也加到<code>FIRST(X)</code>集合中</li><li>3、针对于包含多个产生式<ul><li>1、若<code>X → Y...</code>是一个产生式且Y ∈ V<sub>N</sub>,则把<code>FIRST(Y)</code>中的所有非<code>ε</code>元素都加到<code>FIRST(X)</code>集合中；</li><li>2、若X → Y<sub>1</sub>Y<sub>2</sub>Y<sub>3</sub>…Y<sub>i - 1</sub>Y<sub>i</sub>…Y<sub>k</sub>是一个产生式，Y<sub>1</sub>,…,Y<sub>i-1</sub>都是非终结符<ul><li>1、对于任何j，1 ≤ j ≤ i - 1,FIRST(Y<sub>i</sub>)都含有<code>ε</code>(即Y<sub>1</sub>…Y<sub>i-1</sub>) → ε,则把FIRST(Y<sub>i</sub>)中的所有非ε元素都加到FIRST(X)中，</li><li>2、若所有的FIRST(Y<sub>j</sub>)均含有ε，j = 1, 2, 3, … , k,则把ε加到FIRST(X)中。<h3 id="二、构建每个非终结符的FOLLOW集合"><a href="#二、构建每个非终结符的FOLLOW集合" class="headerlink" title="二、构建每个非终结符的FOLLOW集合"></a>二、构建每个非终结符的FOLLOW集合</h3><blockquote><p> 对于文法<code>G</code>的每个非终结符<code>A</code>构造<code>FOLLOW(A)</code>的办法是：连续使用下面的规则，直到每个<code>FOLLOW</code>集合不再增大为止；</p></blockquote></li></ul></li></ul></li><li><em>ps:*</em><code>FIRST(β)\{ε}</code>表示<code>FIRST(β)</code>除去<code>ε</code>的其他元素<ul><li>1、对于文法的开始符号<code>S</code>,置<code>#</code>于<code>FOLLOW(S)</code>中；</li><li>2、若<code>A → αBβ</code>是一个产生式，则把<code>FIRST(β)\{ε}</code>加至<code>FOLLOW(B)</code>中；</li><li>3、若<code>A → αB</code>是一个产生式，或者<code>A → αBβ</code>是一个产生式而<code>β → ε</code>,则把<code>FOLLOW(A)</code>加到<code>FOLLOW(B)</code>中</li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;一、构造每个文法符号的FIRST集合&quot;&gt;&lt;a href=&quot;#一、构造每个文法符号的FIRST集合&quot; class=&quot;headerlink&quot; title=&quot;一、构造每个文法符号的FIRST集合&quot;&gt;&lt;/a&gt;一、构造每个文法符号的FIRST集合&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;对于每个X-∈V&lt;sub&gt;T&lt;/sub&gt;∪V&lt;sub&gt;N&lt;/sub&gt;,连续使用下面的规则，直至每个FIRST集合不再增大为止：&lt;br&gt;&lt;strong&gt;ps&lt;/strong&gt;:V&lt;sub&gt;T&lt;/sub&gt;表示非终结符集合，V&lt;sub&gt;N&lt;/sub&gt;表示终结符集合&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;1、若X∈V&lt;sub&gt;T&lt;/sub&gt;，那么&lt;code&gt;FIRST(X) =  {X}&lt;/code&gt;
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="编译原理" scheme="https://phantomabyss.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>物理层</title>
