@@ -20,15 +20,26 @@
     var CONFIG = {"hostname":"phantomabyss.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="幻影">
-<meta property="og:url" content="https://phantomabyss.github.io/archives/2019/12/index.html">
+  <meta name="description" content="按照算符的优先关系和结合性质进行语法分析，适合于分析表达式  优先关系 优先关系是左右敏感的。  算符文法 1、一个文法，如果它的任一产生式的右部都不包含两个相继的(并列)的非终结符，即不包含..QR…形式的产生式右部，则我们称该文法为算符文法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算符优先分析法">
+<meta property="og:url" content="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E5%88%86%E6%9E%90%E6%B3%95/index.html">
 <meta property="og:site_name" content="幻影">
+<meta property="og:description" content="按照算符的优先关系和结合性质进行语法分析，适合于分析表达式  优先关系 优先关系是左右敏感的。  算符文法 1、一个文法，如果它的任一产生式的右部都不包含两个相继的(并列)的非终结符，即不包含..QR…形式的产生式右部，则我们称该文法为算符文法。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E6%96%87%E6%B3%95.jpg">
+<meta property="og:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E6%96%87%E6%B3%95%E5%AE%9E%E4%BE%8B.jpg">
+<meta property="og:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%9E%84%E9%80%A0%E4%BC%98%E5%85%88%E5%85%B3%E7%B3%BB%E8%A1%A8%E7%9A%84%E7%AE%97%E6%B3%95-1.jpg">
+<meta property="og:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%9E%84%E9%80%A0%E4%BC%98%E5%85%88%E5%85%B3%E7%B3%BB%E8%A1%A8%E7%9A%84%E7%AE%97%E6%B3%95-2.jpg">
+<meta property="og:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E6%9E%84%E9%80%A0FIRSTVT%E7%9A%84%E7%AE%97%E6%B3%95%E5%AE%9E%E7%8E%B0.jpg">
+<meta property="article:published_time" content="2020-05-30T08:41:43.000Z">
+<meta property="article:modified_time" content="2020-05-30T13:54:39.996Z">
 <meta property="article:author" content="phantom">
+<meta property="article:tag" content="语法分析">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://phantomabyss.github.io/2020/05/30/images/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E6%96%87%E6%B3%95.jpg">
 
-<link rel="canonical" href="https://phantomabyss.github.io/archives/2019/12/">
+<link rel="canonical" href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E5%88%86%E6%9E%90%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -36,12 +47,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>归档 | 幻影</title>
+  <title>算符优先分析法 | 幻影</title>
   
 
 
@@ -153,90 +164,173 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 21 篇日志。 继续努力。</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E5%88%86%E6%9E%90%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/author.jpg">
+      <meta itemprop="name" content="phantom">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="幻影">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          算符优先分析法
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-30 16:41:43 / 修改时间：21:54:39" itemprop="dateCreated datePublished" datetime="2020-05-30T16:41:43+08:00">2020-05-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">编译原理</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>681</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2019</span>
-    </div>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-05T08:27:44+08:00"
-              content="2019-12-05">
-          12-05
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/12/05/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E7%89%A9%E7%90%86%E5%B1%82/" itemprop="url">
-            <span itemprop="name">物理层</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-01T11:39:09+08:00"
-              content="2019-12-01">
-          12-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/12/01/secureCRT/SecureCRT%E8%BF%9E%E6%8E%A5Linux%E6%97%B6%E6%8B%92%E7%BB%9D%E8%AE%BF%E9%97%AE/" itemprop="url">
-            <span itemprop="name">SecureCRT连接Linux时拒绝访问</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-01T08:39:35+08:00"
-              content="2019-12-01">
-          12-01
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2019/12/01/jvm/%E6%95%85%E9%9A%9C%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" itemprop="url">
-            <span itemprop="name">故障管理工具</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
+        <blockquote>
+<p>按照算符的优先关系和结合性质进行语法分析，适合于分析表达式</p>
+</blockquote>
+<h4 id="优先关系"><a href="#优先关系" class="headerlink" title="优先关系"></a>优先关系</h4><blockquote>
+<p>优先关系是左右敏感的。<br><img src = "../../images/编译原理/优先关系.jpg"></p>
+</blockquote>
+<h4 id="算符文法"><a href="#算符文法" class="headerlink" title="算符文法"></a>算符文法</h4><ul>
+<li>1、一个文法，如果它的任一产生式的右部都不包含两个相继的(并列)的非终结符，即不包含..QR…形式的产生式右部，则我们称该文法为算符文法。<a id="more"></a></li>
+<li>2、约定：<ul>
+<li>1、<code>a, b</code>代表任一终结符</li>
+<li>2、<code>P, Q, R</code>代表非终结符</li>
+<li>3、<code>...</code>代表由终结符和非终结符组成的任一序列，包括空字<h4 id="算法优先文法"><a href="#算法优先文法" class="headerlink" title="算法优先文法"></a>算法优先文法</h4><img src="../../images/编译原理/算符优先文法.jpg"></li>
+</ul>
+</li>
+<li>样例1<img src="../../images/编译原理/算符优先文法实例.jpg"></li>
+<li>样例2<h4 id="构造优先关系表的算法"><a href="#构造优先关系表的算法" class="headerlink" title="构造优先关系表的算法"></a>构造优先关系表的算法</h4><img src="../../images/编译原理/构造优先关系表的算法-1.jpg">
+<img src="../../images/编译原理/构造优先关系表的算法-2.jpg">
+#### 构造集合FIRSTVT(P)的算法
+>反复使用下面的两条规则构造集合`FIRSTVT(P)`集合</li>
+<li>1、若有产生式<code>P → a...</code>或<code>P → Qa...</code>,则<code>a ∈ FIRSTVT(P)</code>.</li>
+<li>2、若<code>a ∈ FIRSTVT(Q)</code>,且有产生式<code>P → Q...</code>,则<code>a ∈ FIRSTVT(P)</code><h5 id="算法实现方式"><a href="#算法实现方式" class="headerlink" title="算法实现方式"></a>算法实现方式</h5><ul>
+<li>1、布尔数组<code>F[P, a]</code>,使得<code>F[P, a]</code>为真的条件是，当且仅当<code>a ∈ FIRSTVT(P)</code>.开始时，按上述规则1对每个数组元素<code>F[P, a]</code>赋初值</li>
+<li>2、栈<code>STACK</code>把所有初值为真的数组元素<code>F[P, a]</code>的符号对<code>(P, a)</code>全都放在<code>STACK</code>之中。<img src="../../images/编译原理/构造FIRSTVT的算法实现.jpg"></li>
+<li>3、对栈的操作：若栈<code>STACK</code>不空，就将栈顶项弹出，记此为<code>(Q, a)</code>,对于每个形成<code>P → Q..</code>的产生式，若<code>F[P, a]</code>为假则变其值为真并且将<code>(P, a)</code>推进<code>STACK</code>栈中。实现上述图片中的第2项。<h4 id="构造集合LASTVT-P-的算法"><a href="#构造集合LASTVT-P-的算法" class="headerlink" title="构造集合LASTVT(P)的算法"></a>构造集合<code>LASTVT(P)</code>的算法</h4><blockquote>
+<p>反复使用下面两条规则构造集合<code>LASTVT(P)</code></p>
+</blockquote>
+</li>
+<li>1、如果产生式<code>P → ...a</code>或<code>P → ...aQ</code>,则<code>a ∈ LASTVT(P)</code></li>
+<li>2、若<code>a ∈ LASTVT(P)</code>,且有产生式<code>P → ...Q</code>,则<code>a ∈ LASTVT(P)</code></li>
+<li>3、其他方面与上面计算<code>FIRST</code>集合的方式类似。</li>
+</ul>
+</li>
+</ul>
 
     </div>
-  </div>
-  
-  
-  
 
+    
+    
+    
+	<div>
+		
+			<div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+		
+		</div>
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>phantom
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://phantomabyss.github.io/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E7%AE%97%E7%AC%A6%E4%BC%98%E5%85%88%E5%88%86%E6%9E%90%E6%B3%95/" title="算符优先分析法">https://phantomabyss.github.io/2020/05/30/编译原理/算符优先分析法/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 语法分析</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/%E8%87%AA%E4%B8%8B%E8%80%8C%E4%B8%8A%E5%88%86%E6%9E%90/" rel="prev" title="自下而上分析">
+      <i class="fa fa-chevron-left"></i> 自下而上分析
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/05/30/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/LR%E5%88%86%E6%9E%90%E6%B3%95/" rel="next" title="LR分析法">
+      LR分析法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
@@ -289,6 +383,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#优先关系"><span class="nav-text">优先关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算符文法"><span class="nav-text">算符文法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法优先文法"><span class="nav-text">算法优先文法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造优先关系表的算法"><span class="nav-text">构造优先关系表的算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#算法实现方式"><span class="nav-text">算法实现方式</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造集合LASTVT-P-的算法"><span class="nav-text">构造集合LASTVT(P)的算法</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
