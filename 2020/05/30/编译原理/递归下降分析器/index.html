@@ -237,23 +237,18 @@
 <ul>
 <li>1、分析程序有一组子程序组成，对每一语法单位(非终结符)构造一个相应的子程序，识别对应的语法单位。</li>
 <li>2、通过子程序之间的相互调用实现对输入串的识别</li>
-<li>3、文法的定义通常是递归的，通常具有递归结构<a id="more"></a></li>
-</ul>
-</blockquote>
-<h5 id="定义全局过程和变量"><a href="#定义全局过程和变量" class="headerlink" title="定义全局过程和变量"></a>定义全局过程和变量</h5><ul>
+<li>3、文法的定义通常是递归的，通常具有递归结构<a id="more"></a><h5 id="定义全局过程和变量"><a href="#定义全局过程和变量" class="headerlink" title="定义全局过程和变量"></a>定义全局过程和变量</h5></li>
 <li>1、ADVANCE：把输入串指示器IP指向下一个输入符号，即读入一个单词符号</li>
 <li>2、SYM，IP当前所指的输入符号</li>
 <li>3、ERROR，出错处理子程序<h5 id="递归下降子程序的设计"><a href="#递归下降子程序的设计" class="headerlink" title="递归下降子程序的设计"></a>递归下降子程序的设计</h5><h5 id="扩充的巴克斯范式"><a href="#扩充的巴克斯范式" class="headerlink" title="扩充的巴克斯范式"></a>扩充的巴克斯范式</h5></li>
 <li>1、在元符号“→”或”=”和”|”的基础上,扩充了几个元语言符号：<ul>
 <li>1、用花括号{α}表示闭包运算α<sup>*</li>
 <li>2、用表示{α}<sub>0</sub><sup>n</sup>可任意重复0至n次</li>
-<li>3、用方括号[α]表示{α}<sub>0</sub><sup>1,即表示<code>α</code>的出现可有可无(α|ε)<h5 id="语法图"><a href="#语法图" class="headerlink" title="语法图"></a>语法图</h5><h5 id="JavaCC"><a href="#JavaCC" class="headerlink" title="JavaCC"></a>JavaCC</h5><blockquote>
-<p>可以自动产生一个自上而下的递归下降的语法分析程序(java实现)</p>
+<li>3、用方括号[α]表示{α}<sub>0</sub><sup>1,即表示<code>α</code>的出现可有可无(α|ε)<h5 id="语法图"><a href="#语法图" class="headerlink" title="语法图"></a>语法图</h5><h5 id="JavaCC"><a href="#JavaCC" class="headerlink" title="JavaCC"></a>JavaCC</h5>可以自动产生一个自上而下的递归下降的语法分析程序(java实现)</li>
+</ul>
+</li>
+</ul>
 </blockquote>
-</li>
-</ul>
-</li>
-</ul>
 <p><a href="http://javacc.java.net/" target="_blank" rel="noopener">Java Complier Complier</a></p>
 
     </div>
@@ -525,6 +520,8 @@
 
 
 
+
+  
 
   
 

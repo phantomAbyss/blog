@@ -246,24 +246,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。</p>
-<a id="more"></a>
-<p><strong>前提：<br>    &emsp;使用ssh连接的方式可以避免每次部署项目的时候需要输入用户名和密码的过程，同时也比较安全。</strong></p>
+        <p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。<br><a id="more"></a><br><strong>前提：<br>    &emsp;使用ssh连接的方式可以避免每次部署项目的时候需要输入用户名和密码的过程，同时也比较安全。</strong></p>
 <ul>
 <li><strong>1、配置ssh密钥</strong><br><del>如果已经在GitHub配置ssh密钥，可以跳过</del><ul>
 <li>1.1、生成ssh密钥对<ul>
-<li>1.1.1、查看自己是否已经生成了ssh密钥对,如果没有，文件夹为空。<img src="/images/hexo/ssh.jpg"></li>
-<li>1.1.2、在git bash命令行执行以下命令,建议在生成密钥的过程中不要输入用户名和密码，否则后面就需要其他的配置，一路回车就行了，执行完成后就会生成对应的密钥文件。<img src="/images/hexo/getssh.jpg">
-<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C 你的GitHub对应的邮箱</span><br></pre></td></tr></table></figure>
-<img src="/images/hexo/isapub.jpg">
-.pub后缀的文件就是你的公钥</li>
+<li>1.1.1、查看自己是否已经生成了ssh密钥对,如果没有，文件夹为空。<br><img src="/images/hexo/ssh.jpg"></li>
+<li>1.1.2、在git bash命令行执行以下命令,建议在生成密钥的过程中不要输入用户名和密码，否则后面就需要其他的配置，一路回车就行了，执行完成后就会生成对应的密钥文件。<br><img src="/images/hexo/getssh.jpg"><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -<span class="built_in">t</span> rsa -C 你的GitHub对应的邮箱</span><br></pre></td></tr></table></figure>
+<img src="/images/hexo/isapub.jpg"><br>.pub后缀的文件就是你的公钥</li>
 </ul>
 </li>
-<li>1.2、在GitHub上添加公钥<br>  将上面.pub文件的内容复制到github的ssh keys(头像处的settings-&gt;SSH and GPG keys-&gt;New SSH key)处，title可以随便取。  <img src="/images/hexo/sshkeys.jpg"></li>
+<li>1.2、在GitHub上添加公钥<br>  将上面.pub文件的内容复制到github的ssh keys(头像处的settings-&gt;SSH and GPG keys-&gt;New SSH key)处，title可以随便取。<br>  <img src="/images/hexo/sshkeys.jpg"></li>
 </ul>
 </li>
 <li><strong>2、修改站点目录配置文件</strong><ul>
-<li>2.1、修改_config.yml文件，将部署方式从https方式修改为ssh，直接打开_config.yml搜索deployment即可<img src="/images/hexo/deployment.jpg"></li>
+<li>2.1、修改_config.yml文件，将部署方式从https方式修改为ssh，直接打开_config.yml搜索deployment即可<br><img src="/images/hexo/deployment.jpg"></li>
 <li>2.2、接下来直接在hexo的根目录下打开git bash命令行执行以下两条命令即可<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">"username"</span>    <span class="comment"># GitHub的用户名</span></span><br><span class="line">$ git config --global user.email <span class="string">"yourEmail"</span>  <span class="comment"># GitHub注册时你输入的邮箱</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 </li>
@@ -541,6 +537,8 @@
 
 
 
+
+  
 
   
 

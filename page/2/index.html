@@ -372,7 +372,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-29 23:38:54" itemprop="dateModified" datetime="2020-05-29T23:38:54+08:00">2020-05-29</time>
+                <time title="修改时间：2020-06-05 16:54:59" itemprop="dateModified" datetime="2020-06-05T16:54:59+08:00">2020-06-05</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -390,7 +390,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
+              <span>2.9k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -908,7 +908,7 @@
 
       
           <h4 id="自动内存管理机制"><a href="#自动内存管理机制" class="headerlink" title="自动内存管理机制"></a>自动内存管理机制</h4><h5 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h5><ul>
-<li><p>1、定义：给对象添加一个引用计数器，每当一个地方引用的时候，计数器值就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能在被使用的。
+<li>1、定义：给对象添加一个引用计数器，每当一个地方引用的时候，计数器值就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能在被使用的。
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/21/jvm/%E8%87%AA%E5%8A%A8%E7%AE%A1%E7%90%86%E5%86%85%E5%AD%98/#more" rel="contents">
@@ -1007,9 +1007,7 @@
 
       
           <h4 id="Java虚拟机内存的各个区域"><a href="#Java虚拟机内存的各个区域" class="headerlink" title="Java虚拟机内存的各个区域"></a>Java虚拟机内存的各个区域</h4><h5 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a><strong><em>程序计数器</em></strong></h5><blockquote>
-<p>当前线程的所执行的字节码的行号指示器——线程私有的内存</p>
-</blockquote>
-<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。</span><br><span class="line">* <span class="number">2</span>、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。</span><br><span class="line">* <span class="number">3</span>、线程执行Native方法时：计数器的值为空（Undefined）。</span><br></pre></td></tr></table></figure>
+<p>当前线程的所执行的字节码的行号指示器——线程私有的内存<br><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* <span class="number">1</span>、Java虚拟机的多线程是通过线程轮流切换并分配处理器执行时间来实现的。——每个线程都有一个独立的程序计数器，线程之间互不影响。</span><br><span class="line">* <span class="number">2</span>、线程执行Java方法时：程序计数器记录正在执行的虚拟机字节码指令的地址。</span><br><span class="line">* <span class="number">3</span>、线程执行Native方法时：计数器的值为空（Undefined）。</span><br></pre></td></tr></table></figure><br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/11/16/jvm/Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/#more" rel="contents">
@@ -1107,7 +1105,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。</p>
+          <p>对于每次使用git bash部署博客到GitHub都需要输入用户名和密码，总觉得很烦，经过在网上查找的一些资料和自己一些理解记录一哈过程，便于以后查询。<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2019/09/27/hexo/%E8%A7%A3%E5%86%B3%E9%83%A8%E7%BD%B2%E6%97%B6%E6%AF%8F%E6%AC%A1%E8%BE%93%E5%85%A5%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E9%97%AE%E9%A2%98/#more" rel="contents">
@@ -1349,6 +1347,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 

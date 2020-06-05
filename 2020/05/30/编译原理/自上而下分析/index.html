@@ -241,7 +241,6 @@
 <p>如果一个文法G满足以上条件，则称该文法G为LL(1)文法</p>
 <h5 id="LL-1-分析法"><a href="#LL-1-分析法" class="headerlink" title="LL(1)分析法"></a>LL(1)分析法</h5><blockquote>
 <p>假设要用非终结符A进行匹配，面临的输入符号为a，A的所有产生式为A → α<sub>1</sub> | α<sub>2</sub> | … α<sub>n</sub></p>
-</blockquote>
 <ul>
 <li>1、若a ∈ FIRST(α<sub>i</sub>),则指派α<sub>i</sub>执行分配任务；</li>
 <li>2、若<code>a</code>不属于任何一个候选首符集，则：<ul>
@@ -250,6 +249,7 @@
 </ul>
 </li>
 </ul>
+</blockquote>
 <h5 id="LL-1-文法分析方法"><a href="#LL-1-文法分析方法" class="headerlink" title="LL(1)文法分析方法"></a>LL(1)文法分析方法</h5><ul>
 <li>1、递归下降分析器</li>
 <li>2、预测分析程序</li>
@@ -524,6 +524,8 @@
 
 
 
+
+  
 
   
 
